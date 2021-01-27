@@ -4,7 +4,7 @@
 
 Squidler is an app that a couple of friends and I dreamt up in October 2013. We wanted to turn messaging into a game. We didn't know how to code, so we taught ourselves by learning as we were building 👨‍💻 . It was our first coding project so we made a lot of the classic mistakes, e.g. not verifying that anyone actually wanted what we were building 🤦‍♂️ .
 
-It took blood, sweat and tears 😫 but we eventually finished the project (in 2016 😱 ). Although almost no one downloaded Squidler, I'm still proud of what we did. We learnt a lot about coding and we learnt some valuable life lessons:
+It took blood, sweat and tears 😫 , but we eventually finished the project (in 2016 😱 ). Although almost no one downloaded Squidler, I'm still proud of what we did. We learnt a lot about coding and we learnt some valuable life lessons:
 
 - 💡 Ideas are cheap, execution is the hard part
 - 🙊 Don't hold onto your ideas for too long
