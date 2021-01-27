@@ -1,0 +1,37 @@
+{
+  "author": "Matt Lilley",
+  "name": "squidler_api",
+  "description": "Squidler API",
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=0.10.0"
+  },
+  "dependencies": {
+    "actionhero": "15.0.2",
+    "base-x": "^1.0.4",
+    "googleapis": "^11.0.0",
+    "mongoose": "^4.6.1",
+    "nodemailer": "latest",
+    "request-image-size": "^1.2.2",
+    "request-promise": "^3.0.0",
+    "ws": "latest"
+  },
+  "devDependencies": {
+    "mocha": "latest",
+    "should": "latest"
+  },
+  "scripts": {
+    "start": "actionhero start",
+    "start_fileServer_windows": "set ACTIONHERO_ROLE=fileServer&actionhero start",
+    "start_fileServer": "ACTIONHERO_ROLE=fileServer actionhero start",
+    "start_worker": "ACTIONHERO_ROLE=worker actionhero start",
+    "start_worker_windows": "set ACTIONHERO_ROLE=worker&actionhero start",
+    "console": "actionhero console",
+    "cluster": "actionhero start cluster",
+    "cluster_worker": "ACTIONHERO_ROLE=worker actionhero start cluster",
+    "cluster_worker_windows": "set ACTIONHERO_ROLE=worker&actionhero start cluster",
+    "actionhero": "actionhero",
+    "test": "NODE_ENV=test mocha"
+  },
+  "main": "atomDebug"
+}

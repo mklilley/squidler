@@ -1,0 +1,14 @@
+VS
+node_modules
+pids
+log
+.idea
+uploads
+/Squidler-google-stuff.json
+/test.js
+redisDB
+/pm2.json
+mongoDB
+/file-uploader.html
+/locales/en.json
+/public
