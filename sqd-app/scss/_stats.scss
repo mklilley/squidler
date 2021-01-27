@@ -1,0 +1,66 @@
+
+.sqd-stats{
+    
+    .spinner svg {
+  stroke: $positive;
+  fill: $positive;
+}
+    
+/*    .item, .item-complex, .item-content{
+    
+    background-color: white!important;
+    border-width: 0!important;
+    margin: 15px 5px 15px 5px!important;
+    overflow: visible!important;
+    
+    
+ 
+    
+    p {
+    font-size:$font-size-base!important;
+        overflow:visible;
+    }
+    
+    h2.black {
+    color:black;
+    }
+
+    
+   
+    
+    input[type] {
+    background-color:transparent!important;
+    }
+    
+
+}*/
+    
+    .item {
+        
+          background-color: white!important;
+    border-width: 0!important;
+    margin: 15px 5px 15px 5px!important;
+    overflow: visible!important;
+    }
+    
+    .item-avatar{
+        
+          @extend .item;
+        
+       
+        
+    img{
+max-height: 65px!important;
+        max-width: 65px!important;
+   }
+        
+    padding-left: 93px!important;
+    min-height: 97px;
+    
+}
+
+    
+
+
+
+}

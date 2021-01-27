@@ -1,0 +1,62 @@
+<h1><code ng:non-bindable="">stores</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-stores-page"><p>This is a service that is returned as part of storesProvider. Used to interface with the html5 local storage</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">stores($q, $localStorage, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-stores-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$localStorage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-stores-page"><p>Third party service to access html5 local storage</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-stores-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-stores-page"><p>Service object exposing methods - create, read, update</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(name, id, data)</h3>
+<div class="create"><div class="create-page"><p>Saves some data in the local storage, but only if it doesnt exist already.  It if does exist nothing is changed, update should be used instead.</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="create-page"><p>Name of the type of entry you want to save e.g. &#39;squidles&#39; (Note, this should be plural)</p>
+</div></td></tr><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="create-page"><p>Unique id of the entry to be saved. If not specified then an empty object will be created under &quot;name&quot; if it did not already exist, otherwise nothing is changed.</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="create-page"><p>Data object to be saved</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>Resolves to a string of the form - name + &quot; with id= &quot; + id + &quot; successfully saved to local storage&quot; if the data is stored successfully, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">stores.create('squidles','VJ08tg6', {...squidle data...})</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_read">read(name, id)</h3>
+<div class="read"><div class="read-page"><p>Reads some data in the local storage</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Name of the type of entry you want to read e.g &#39;squidles&#39; (Note, this should be plural)</p>
+</div></td></tr><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Unique id of the entry to be read. If not specified all entries under &quot;name&quot; will be returned</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object specific to the type of data stored if the data is stored successfully, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">stores.read('squidles','VJ08tg6')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_remove">remove(name, id, fields)</h3>
+<div class="remove"><div class="remove-page"><p>Removes some data in the local storage</p>
+</div><h5 id="methods_remove_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="remove-page"><p>Name of the type of entry you want to remove e.g. &#39;tempSquidle&#39;</p>
+</div></td></tr><tr><td>id <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="remove-page"><p>Unique id of the entry to be removed (if not present then all ids will be removed and the store will be reset to {})</p>
+</div></td></tr><tr><td>fields <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="remove-page"><p>Array of strings that are the keys to be delted. NOTE if not present then the entire data entry will be delted from the local storage</p>
+</div></td></tr></tbody></table><h5 id="methods_remove_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="remove-page"><p>Resolves to a string of the form - &#39;Entries from &#39; name  &quot; with id= &quot; id  &quot; successfully deleted from the local storage&quot; if the data is was deleted successfully, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_remove_example">Example</h4>
+<div class="example"><div class="remove-page"><pre class="prettyprint linenums">stores.remove('tempSquidle','prize',['image'])</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_update">update(name, id, data)</h3>
+<div class="update"><div class="update-page"><p>Updated some data in the local storage</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Name of the type of entry you want to update e.g. &#39;squidles&#39; (Note, this should be plural)</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Unique id of the entry to be updated</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="update-page"><p>Object with updated data, note not all original data keys need to be present, only ones that you want to change</p>
+</div></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="update-page"><p>Resolves to a string of the form - name + &quot; with id= &quot; + id + &quot; successfully updated&quot; if the data is updated successfully, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_update_example">Example</h4>
+<div class="example"><div class="update-page"><pre class="prettyprint linenums">stores.update('squidles','VJ08tg6', {...squidle data...})</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

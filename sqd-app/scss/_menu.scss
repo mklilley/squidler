@@ -1,0 +1,56 @@
+/* Menu */
+
+.menu-bottom {
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    position: absolute;
+}
+
+.menu-top {
+    top: 16px;
+    left: 16px;
+    right: 16px;
+    position: absolute;
+}
+
+.menu .avatar {
+    top: 16px;
+    left: 16px;
+    height: 65px;
+    width: 65px;
+      line-height: 65px;
+    font-size: 40px;
+}
+
+.menu .bar.bar-header.expanded {
+    box-shadow: none;
+    min-height: 150px;
+}
+
+.menu-open .bar.bar-header.expanded {
+    background-position: 0;
+    background-size: 100%;
+}
+
+.has-expanded-header {
+    top: 150px !important;
+}
+
+.bar.expanded {
+ min-height: 150px!important;
+}
+
+.menu-username {
+font-family: FlamencoRegular;
+    color:$energized !important;
+    letter-spacing:0.09em;
+    font-size:$font-size-large;
+}
+
+.menu {
+i {
+font-size: 25px!important;
+}
+}
+

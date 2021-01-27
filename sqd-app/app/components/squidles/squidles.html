@@ -1,0 +1,214 @@
+
+<ion-view view-title="Squidles" class="background sqd-squidles">
+
+  <ion-content class="padding" ng-click="squidles.hideAllOptions();">
+
+        <ion-refresher
+    pulling-text="Pull to refresh..."
+    on-refresh="squidles.refresh()">
+  </ion-refresher>
+
+      <div class="padding">
+
+          <!----------------Squidles list------------->
+
+    <ion-list  hold-for-options-wrapper id="walk-squidles">
+
+
+     <ion-item ng-repeat="(id, squidle) in squidles.list | orderBy:'-timeRemaining'" ng-click="squidles.goToSquidle(squidle.id)" class="item-avatar item-remove-animate"   hold-for-options>
+
+         <sqd-avatar src="{{squidle.avatar}}" letter-from="{{squidle.first_name || squidle.username}}"></sqd-avatar>
+
+  <span class="white">{{squidle.username}} </span>
+    <span class="item-note white">
+
+
+     <i ng-hide="squidle.alreadyAnswered" class="challengeText sqd-icon-challenge"></i>
+
+
+    </span>
+          <div class="grey"><i class="sqd-icon-clock"></i> {{squidles.countDown(squidle.timeRemaining)}} </div>
+
+           <div class="grey no-padding" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;width:100%">
+
+<!--               <i ng-show="squidle.hasAttachment" class="sqd-icon-attach grey"></i>-->
+
+               {{squidle.description}}</div>
+
+
+
+                  <ion-option-button class="button-energized"
+                       ng-click="squidles.statsOnSquidle(squidle.id)" ion-stop-event="click">
+       <div class="button button-icon button-clear ion-stats-bars white icon-size-extra-large"></div>
+    </ion-option-button>
+
+
+           <ion-option-button class="button-positive"
+                       ng-click="squidles.shareSquidle(squidle.id)" ion-stop-event="click">
+       <div class="button button-icon button-clear ion-share white icon-size-extra-large"></div>
+    </ion-option-button>
+
+
+
+
+                    <ion-option-button class="button-assertive"
+                       ng-click="squidles.deleteSquidle(squidle)" ion-stop-event="click">
+       <div class="button button-icon button-clear ion-ios-trash white icon-size-extra-large"></div>
+    </ion-option-button>
+
+
+
+
+
+      </ion-item>
+
+
+
+
+    </ion-list>
+
+
+          <!----------------First time using app------------->
+
+          <div ng-if="false">
+
+          <div class="row row-center full">
+
+              <div class="col">
+
+                              <h3 class="white  text-center">Welcome!</h3>
+
+
+
+
+
+
+
+
+                <div class="white multiline padding-bottom">Here is where you'll see a list of Squidles you create or view, like the one below. </div>
+
+
+
+
+                       <ion-list  hold-for-options-wrapper>
+                           <ion-item class="item-avatar"   hold-for-options ng-click="">
+
+
+          <img cache-src="{{squidles.defaultAvatar}}" circle-container-style="display:inline-block;position:absolute;left:30px;" style="object-fit:cover; object-position: 50% 0;" class="avatar">
+  <span class="white">Squidly </span>
+    <span class="item-note white">
+
+
+     <i class="challengeText sqd-icon-challenge"></i>
+
+
+    </span>
+          <div class="grey"><i class="sqd-icon-clock"></i> {{::squidles.countDown(500)}} </div>
+
+           <div class="grey no-padding" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;width:100%"> <i  class="sqd-icon-attach grey"></i>Just an example</div>
+
+
+
+                  <ion-option-button class="button-energized"
+                       >
+       <div class="button button-icon button-clear ion-stats-bars white icon-size-extra-large"></div>
+    </ion-option-button>
+
+
+           <ion-option-button class="button-positive"
+                      >
+       <div class="button button-icon button-clear ion-share white icon-size-extra-large"></div>
+    </ion-option-button>
+
+
+
+
+                    <ion-option-button class="button-assertive"
+                      >
+       <div class="button button-icon button-clear ion-ios-trash white icon-size-extra-large"></div>
+    </ion-option-button>
+
+                  </ion-item>
+
+
+
+                         </ion-list>
+
+
+
+                        <div class="white multiline padding-top"> This Squidle has media attached to it, has not yet been solved by you and will expire in 8m 20s.</div>
+
+                  <div class="white multiline padding-top">Tap and hold, or swipe, to share your Squidle or to see who has solved it.</div>
+
+                      <div class="white multiline padding-top">To update your profile pic or to find help just go to the menu.</div>
+
+                      <div class="white multiline padding-top">That's it, time to create your first squidle.</div>
+
+
+
+
+
+
+
+
+                  </div>
+
+
+                  </div>
+          </div>
+
+
+          <!----------------Empty Squidles history------------->
+
+          <div ng-if="objectKeys(squidles.list).length==0">
+
+          <div class="row row-center full">
+
+              <div class="col">
+
+                              <h3 class="white  text-center">Welcome back!</h3>
+
+
+
+
+
+
+
+
+
+                      <div class="white multiline padding-top">Shall we make some more of those lovely Squidles together?</div>
+
+
+
+
+
+
+
+              </div>
+
+                  </div>
+          </div>
+
+
+
+
+          </div>
+
+  </ion-content>
+
+    <ion-footer-bar class="bar-clear" keyboard-attach>
+
+
+
+<div class="full padding-horizontal">
+
+                   <button class=" strong button button-block button-energized no-padding no-margin" ng-click="squidles.createSquidle()">
+    Create Squidle
+</button>
+
+    </div>
+    </ion-footer-bar>
+
+
+
+</ion-view>

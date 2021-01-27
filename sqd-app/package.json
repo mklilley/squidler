@@ -1,0 +1,15 @@
+{
+  "name": "sqd-app",
+  "version": "1.1.1",
+  "description": "sqd-app: An Ionic project",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-angular-templatecache": "^1.7.0",
+    "gulp-apidoc": "^0.2.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-ngdocs": "^0.2.13",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.1.0"
+  }
+}

@@ -1,0 +1,64 @@
+<ion-modal-view class="background">
+<ion-header-bar align-title="left" class="bar-dark">
+    
+
+    
+  <div class="buttons">
+    <button class="button button-icon sqd-icon-left-arrow" ng-click="help.askQuestion.hide()"></button>
+  </div>
+  <h1 class="title">Ask a Question</h1>
+
+</ion-header-bar>
+  
+      <ion-content style="color:white" class="padding sqd-help" has-bouncing="false">
+          
+          <form name="help.helpForm" class="">
+          <div class="row padding">
+<p>Do you have a specific question you'd like to ask?</p>
+ </div>
+           <div class="row padding">
+<p>Send us your question and we'll reply with an answer within 48 hours.</p>
+               </div>
+          
+          <div class="row padding">
+              
+              <sqd-input name="name" colour="dark" background="background" type="text" placeholder="Name" model="help.question.name" form="help.helpForm" ng-readonly="false" valid="true" sqd-required="true" links="false"></sqd-input>
+                            </div>
+             
+          
+          <div class="row padding">
+              
+              <sqd-input name="email" colour="dark" background="background" type="email" placeholder="Email" model="help.question.email" form="help.helpForm" ng-readonly="false" valid="help.helpForm.email.$valid" sqd-required="true" links="false"></sqd-input>
+              
+              </div>
+          
+           <div class="row padding" style="height:150px;">
+               
+                <sqd-input name="question" colour="dark" background="background" textarea="true" type="text" placeholder="Question" model="help.question.message" form ="help.helpForm" ng-readonly="false" valid="true" sqd-required="true" links="false"></sqd-input>
+               </div>
+                <div class="row padding">
+                        
+          <button class=" strong button button-block button-energized"ng-click="help.submitQuestion()" >
+  Submit your question
+                    </button></div>
+               </form>
+
+          
+<!--          
+          <div style="position:relative; width:100%;height:60px" class="padding-top">
+              
+              <div class="full padding-horizontal">
+       
+                   <button class=" strong button button-block button-energized no-padding no-margin" ng-click="help.submitQuestion()">
+  Submit your question
+</button>
+
+    </div>
+          
+          </div>-->
+      
+  </ion-content>
+
+
+
+    </ion-modal-view>

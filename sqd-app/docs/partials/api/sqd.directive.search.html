@@ -1,0 +1,23 @@
+<h1><code ng:non-bindable="">search</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-directive-page sqd-directive-search-page"><p>Creates an interfae to searach images from the internet</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;search
+       id="{string}"
+       select="{function}"
+       hide="{function}"&gt;
+&lt;/search&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-search-page"><p>Unique id for this search element</p>
+</div></td></tr><tr><td>select</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="sqd-directive-page sqd-directive-search-page"><p>reference to a funcion on the parent scope that handles an image selected from the search list. Takes arguments (id,img), where img is an object of the form { thumb: [thumbnail link],  url: [full image link], from: &#39;link&#39;,type: &#39;image&#39;}</p>
+</div></td></tr><tr><td>hide</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="sqd-directive-page sqd-directive-search-page"><p>reference to a function on the parents scope to be called to hide the modal view</p>
+</div></td></tr></tbody></table></div>
+</div>

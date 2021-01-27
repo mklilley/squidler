@@ -1,0 +1,45 @@
+<h1><code ng:non-bindable="">sqdInput</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Creates an input/textarea with some UI elements to allow the user to e.g. delete all text and also see if input is valid. Also allows the input to be scanned for attachable content from the web</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;sqd-input
+       type="{string}"
+       placeholder="{string}"
+       name="{string}"
+       required
+       maxlength="{int}"
+       model="{string or object}"
+       ng-readonly="{string}"
+       valid="{bool}"
+       textarea="{bool}"
+       form="{object}"
+       colour="{string}"
+       background="{string}"
+       links="{bool}"
+       nospaces="{bool}"&gt;
+&lt;/sqd-input&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>type</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Same a for html input element</p>
+</div></td></tr><tr><td>placeholder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Same a for html input element</p>
+</div></td></tr><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Same a for html input element</p>
+</div></td></tr><tr><td>required</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Same as for html input element</p>
+</div></td></tr><tr><td>maxlength</td><td><a href="" class="label type-hint type-hint-int">int</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Make the input/textarea invalid if its length is greater than this</p>
+</div></td></tr><tr><td>model</td><td><a href="" class="label type-hint type-hint-string">string or object</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Holds the data associated with the input, note this can be just text (use string) and/or media (use object) depending on whether checkForLinks has been selected as an attribute. If set as an object it will have the form {text:[],media:[]}</p>
+</div></td></tr><tr><td>ng-readonly</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Same a for html input element with angularJS</p>
+</div></td></tr><tr><td>valid</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Is the input valid or not</p>
+</div></td></tr><tr><td>textarea</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Is the input a textarea</p>
+</div></td></tr><tr><td>form</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Form element that this input belongs to</p>
+</div></td></tr><tr><td>colour</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Class name for the colour of the input</p>
+</div></td></tr><tr><td>background</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>Class name for the background colour of the view that the input is inside of</p>
+</div></td></tr><tr><td>links</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>If true the content of the input is checked to see if it contains links, the content of which is then attached to the media key of the model object. Note &quot;model&quot; must be an object not a string for this</p>
+</div></td></tr><tr><td>nospaces</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-sqdinput-page"><p>If true then the user will be forbidden from typing a space into the input</p>
+</div></td></tr></tbody></table></div>
+</div>

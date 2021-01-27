@@ -1,0 +1,28 @@
+<h1><code ng:non-bindable="">files</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-files-page"><p>This is a service that is returned as part of filesProvider. Used to upload image files to the backend</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">files($q, resources, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-files-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>resources</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-files-page"><p>Service to communicate with backend resources</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-files-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-files-page"><p>Service object exposing methods - create</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(files)</h3>
+<div class="create"><div class="create-page"><p>Takes an array of dataURI objects, turns them into blobs and creates an jpeg file on the backend</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>files</td><td><a href="" class="label type-hint type-hint-array">array</a></td><td><div class="create-page"><p>e.g. [{data: dataURI}]</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>Resolves to an array of objects  -e.g  [{url:&#39;<a href="http://squidler.com/api/v1/files/xCvqk8wPnD5KbAlsAwQJ7z.jpeg}">http://squidler.com/api/v1/files/xCvqk8wPnD5KbAlsAwQJ7z.jpeg}</a>] -  if the files was successfully uploaded, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">files.create([data:'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7'])</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

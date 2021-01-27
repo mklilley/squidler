@@ -1,0 +1,82 @@
+.sqd-share{
+    
+    .wrap {
+        
+        -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+         -webkit-flex-wrap: wrap;
+  flex-wrap: wrap;
+        -webkit-justify-content: space-between; 
+  justify-content: space-between; 
+    }
+
+.item, .item-complex, .item-content{
+    
+    background-color: white!important;
+    border-width: 0!important;
+    margin: 15px 5px 15px 5px!important;
+    overflow: visible!important;
+    
+    
+ 
+    
+    p {
+    font-size:$font-size-base!important;
+        overflow:visible;
+    }
+    
+    h2.black {
+    color:black;
+    }
+
+    
+   
+    
+    input[type] {
+    background-color:transparent!important;
+    }
+    
+
+}
+    
+        i {
+font-size: 25px;
+}
+    
+
+        .button.button-fab,
+.bar .button.button-fab {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    z-index: 9999;
+    width: 45px!important;
+    height: 45px!important;
+    min-height: 45px!important;
+    min-width: 45px!important;
+    border-radius: 50%!important;
+    overflow: hidden;
+    margin: 3px;
+    padding: 0;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: 0.3s fade-in-out;
+    transition: 0.3s fade-in-out;
+    -webkit-transition-property: -webkit-transform, box-shadow;
+    transition-property: transform, box-shadow;
+
+}
+
+    .toggle-small .handle{
+    top:4px;
+    }
+    
+    .item-toggle{
+    margin:0px!important;
+    }
+
+}
+

@@ -1,0 +1,29 @@
+<h1><code ng:non-bindable="">googleImages</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-googleimages-page"><p>This is a service that is returned as part of googleImagesProvider. Used to search google images</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">googleImages($q, $http, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-googleimages-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-googleimages-page"><p>Angular http service</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-googleimages-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-googleimages-page"><p>Service object exposing methods - read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_read">read(query, pageNum)</h3>
+<div class="read"><div class="read-page"><p>Queries google images and returns 10 results at a time</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>query</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>What you are searching google images for</p>
+</div></td></tr><tr><td>pageNum</td><td><a href="" class="label type-hint type-hint-integer">integer</a></td><td><div class="read-page"><p>Which set of 10 results to show (1 = first set of 10, 2 = second set of 10)</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object of the form - {results: [{thumb:string, url:string, aspect:number}], nextPageIndex: integer} -  if search was successfully performed, otherwise the promise is rejected.</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">googleImages.read('chicken',1)</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

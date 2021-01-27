@@ -1,0 +1,114 @@
+
+<ion-view view-title="Create" class="background sqd-create">
+
+
+
+<ion-content scroll="false">
+
+  
+        
+      
+        <div class = "{{::key}} padding animate" ng-click="create.togglePanel(key)" ng-style="{height:create.panelSize(key)}" ng-repeat="(key, value) in create.squidle" style="overflow:hidden">
+
+            
+<div  class="full text-center animate padding">
+    
+
+        
+        <div class="animate margin-bottom" ng-style="create.calcStyle(key)">
+        
+        <i class="animate white sqd-icon-{{::key}}" ng-class="{titleIcon:create.activePanel==''}" style="line-height:1.1"></i>
+        
+        <div class="text-center white " ng-show=" create.activePanel=='' || create.activePanel==key"><strong>{{::$index+1}}.</strong> {{::create.panelText[key]}}</div>
+            
+            </div>
+        
+    
+    
+ <div ng-show="create.activePanel==key" >
+
+        
+<div class="textContainer margin-bottom" ng-class="{shrink:value.media.thumb}">
+         
+                                 <div id="{{'walk-'+key}}" class=" padding " ng-class="{placeholder:(value.text=='')}" ion-stop-event="click" ng-click="create.showFullScreenText()">
+
+{{value.text || create.placeholderText[key]}}
+
+                                   
+                </div>
+
+         </div>
+    
+    <div class="row no-padding">
+     <div class="col col-25 text-left col-bottom no-padding">
+  
+
+         <div class="sqd-thumb-container" ng-if="value.media" ng-click="create.toggleImageControls()" ion-stop-event="click" ng-if="key!='answer'">
+        
+       <img ng-src="{{value.media.thumb}}" class="sqd-thumb">
+
+    
+ <div ng-click="create.showCamera()" class="button button-icon  sqd-thumb-edit" ng-show="create.showImageControls && create.canEdit(key)" ion-stop-event="click" >
+     
+     <div class="row row-center row-middle no-padding full">
+    <i class="white sqd-icon-brush"></i>
+     </div>
+             </div> 
+        
+        <div ng-click="create.deleteImage(key)" class="button button-icon  sqd-thumb-remove" ng-show="create.showImageControls" ion-stop-event="click">
+             <div class="row row-center row-middle no-padding full">
+              <i class="white sqd-icon-bin"></i>
+            </div>
+             </div>
+             
+             </div>
+
+          
+         </div>
+     <div class="col col-75 text-right col-bottom no-padding" style="overflow: visible;">
+         
+                  <div ng-click="create.next(key)" class="button white {{key}}Text next" ion-stop-event="click" >{{::create.nextText[key]}}</div>
+
+                   <div ng-click="create.showCamera()" class="button button-icon sqd-attach"  ng-hide="value.media" ion-stop-event="click" ng-if="key!='answer'">
+                       <div class="row row-center row-middle no-padding full">
+                           <i class="white sqd-icon-camera "></i></div>
+         </div>
+                            <div ng-click="create.showSearch()" class="button button-icon  sqd-attach"  ng-hide="value.media" ion-stop-event="click" ng-if="key!='answer'">
+                                
+                                <div class="row row-center row-middle no-padding full">
+                                 <i class="white ion-android-search "></i>
+                                
+                                </div>
+            
+         </div>
+         
+                                     <div class="button button-icon sqd-attach"  ion-stop-event="click" ng-if="key=='answer'" ng-click="create.previewSquidle()">
+                                         
+          <div class="row row-center row-middle no-padding full">
+              
+                                 <i class="white ion-eye "></i>
+                                
+                                </div>
+         </div>
+
+
+    </div>
+        
+      
+         </div>
+        </div>
+  
+       
+        
+      </div>
+            
+            </div>
+    
+    
+
+    
+  </ion-content>
+
+</ion-view>
+
+

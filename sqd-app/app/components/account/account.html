@@ -1,0 +1,56 @@
+
+<ion-view view-title="Profile" class="background sqd-account">
+ <ion-nav-buttons side="secondary">
+<span ng-show="account.profileForm.$dirty">
+     <button  class="button button-icon sqd-icon-save" ng-click="account.save()"></button>
+             <button  class="button" ng-click="account.discard()">
+        Discard
+      </button>
+    </span>
+    </ion-nav-buttons>
+  <ion-content class="padding" has-bouncing="false">
+       <form name="account.profileForm" class="full">
+
+<div class="padding">
+    <div class="row padding">
+
+      <ion-item class="item-avatar">
+
+           <sqd-avatar src="{{account.profile.avatar}}" letter-from="{{account.profile.first_name || account.username}}" ng-click="account.camera.show()"></sqd-avatar>
+
+
+
+         <span class="flamenco menu-username text-bottom">
+             {{::account.username}}</span>
+          </ion-item>
+        </div>
+
+
+              <div class="row padding-vertical" style="height:150px;">
+
+                                    <sqd-input textarea="true" colour="dark" background="background" name="bio" type="text" placeholder="Short Bio" model="account.profile.bio" ng-readonly="false" valid="true" form="account.profileForm" links="false" ng-class="{'prevent-ghost-click':account.tapBlock}"></sqd-input>
+
+
+                  </div>
+               <div class="row padding-vertical">
+
+                    <sqd-input colour="dark" background="background" name="first_name" type="text" placeholder="Name" model="account.profile.first_name" ng-readonly="false" valid="true" form="account.profileForm" links="false"></sqd-input>
+
+
+                    </div>
+
+              <div class="row padding-vertical">
+
+                  <sqd-input colour="dark" background="background" name="locatione" type="text" placeholder="Location" model="account.profile.location" ng-readonly="false" valid="true" form="account.profileForm" links="false"></sqd-input>
+
+
+
+                </div>
+                <input name="avatar" type="hidden" ng-model="account.hiddenInput">
+
+
+</div>
+    </form>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,35 @@
+<h1><code ng:non-bindable="">fullScreenText</code>
+<div><span class="hint">directive in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Creates an interface to edit text in full screen mode</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage">as element:<pre class="prettyprint linenums">&lt;full-screen-text
+       id="{string}"
+       hide="{function}"
+       active="{bool}"
+       data="{object/string}"
+       placeholder="{string}"
+       form="{object}"
+       links="{bool}"
+       sqd-required="{string}"
+       valid="{bool}"&gt;
+&lt;/full-screen-text&gt;</pre>
+<h3 id="usage_directive-info">Directive info</h3>
+<div class="directive-info"><ul><li>This directive creates new scope.</li>
+</ul>
+</div>
+<h4 id="usage_directive-info_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Unique id for this full screen text element</p>
+</div></td></tr><tr><td>hide</td><td><a href="" class="label type-hint type-hint-function">function</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>reference to a function on the parents scope to be called to hide the modal view</p>
+</div></td></tr><tr><td>active</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>A boolean to determine if this full screen text view is currently active</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object/string</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Will hold all the data associated with the input, i.e. text any media.  Use object if you want to use fullScreenText with check-for-links directive, otherwise you can just use a string</p>
+</div></td></tr><tr><td>placeholder</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Placeholder for the textarea</p>
+</div></td></tr><tr><td>form</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Form element that this fullScreenText belongs to</p>
+</div></td></tr><tr><td>links</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>If true the content of the fullScreenText is checked to see if it contains links, the content of which is then attached to the media key of the data object (obviously data must be an object and not a string in this case)</p>
+</div></td></tr><tr><td>sqd-required</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Specifies if the textarea is a required part of the form (if indeed this fullScreenText is part of a form)</p>
+</div></td></tr><tr><td>valid</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="sqd-directive-page sqd-directive-fullscreentext-page"><p>Is the fullScreenText valid or not</p>
+</div></td></tr></tbody></table></div>
+</div>

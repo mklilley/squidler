@@ -1,0 +1,24 @@
+<ion-content class=" sqd-create " ng-class="{prize:fullScreenText.id=='prize', challenge:fullScreenText.id=='challenge', answer:fullScreenText.id=='answer'}"  ng-style="fullScreenText.adjustForIos" scroll="false">
+
+<div class="full ">
+     <sqd-input name="{{::fullScreenText.id}}" colour="whiteBackground" background="{{::fullScreenText.id}}" textarea="true" type="text" placeholder="{{::fullScreenText.placeholder}}" model="fullScreenText.data" form="fullScreenText.form" ng-readonly="false" valid="fullScreenText.form[fullScreenText.id].$valid" links="{{::fullScreenText.links}}" sqd-required="{{::fullScreenText.sqdRequired}}" maxlength="{{::fullScreenText.maxCharacters}}" ng-class="{'prevent-ghost-click':fullScreenText.tapBlock}"></sqd-input>
+
+</div>
+
+
+    </ion-content>
+
+
+
+    <ion-footer-bar keyboard-attach  ng-class="{'bar-energized':fullScreenText.id=='prize', 'bar-positive':fullScreenText.id=='challenge', 'bar-assertive':fullScreenText.id=='answer'}" class="sqd-create ">
+    <div class=" full" style="overflow:hidden" >
+      <img class="footerThumbnail" ng-src="{{fullScreenText.data.media.thumb || 'data:image/gif;base64,R0lGODlhAQABAAAAACH5BAEKAAEALAAAAAABAAEAAAICTAEAOw=='}}">
+    <span class="item-note white"><strong>{{fullScreenText.charactersRemaining()}}</strong>
+      <div class="button button-icon square whiteBackground" on-tap="fullScreenText.done()">
+          <div class="row row-center row-middle no-padding full">
+      <i class="ion-android-done" ng-class="{prizeText:fullScreenText.id=='prize', challengeText:fullScreenText.id=='challenge', answerText:fullScreenText.id=='answer'}" ></i></div>
+    </div>
+      </span>
+
+  </div>
+    </ion-footer-bar>

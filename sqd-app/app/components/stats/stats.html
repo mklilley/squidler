@@ -1,0 +1,91 @@
+<ion-view view-title="Stats" cache-view="false" class="sqd-stats background-light">
+    
+     <ion-nav-buttons side="secondary">
+<span >
+     <button  class="button button-icon ion-ios-reload" ng-disabled="!stats.canRefresh" ng-click="stats.refresh()"></button>
+             
+    </span>
+    </ion-nav-buttons>
+
+<ion-content has-bouncing="false">
+    
+            <ion-refresher ng-if="stats.canRefresh"
+    pulling-text="Pull to refresh..."
+    on-refresh="stats.refresh()">
+  </ion-refresher>
+    
+    <div class = "row">
+        <div class = "col col-center">
+            
+            <ion-list>
+                
+                                            <ion-item   class="text-center ">
+                <h2 class="assertive" style="font-weight:bold">FAKE DATA</h2>
+
+                
+                </ion-item>
+
+                
+                            <ion-item   class="text-center ">
+                <h2 class="assertive">Summary:</h2>
+                
+                
+                <div on-tap="share.goToSquidle()"><i class="ion-android-done positive"></i> Attempts: {{stats.summary.attempts}}</div>                
+                <div on-tap="share.goToSquidle()"><i class="ion-android-done-all energized"></i> Solves: {{stats.summary.solves}}</div>
+                
+                </ion-item>
+                
+                <ion-item class="item-avatar" ng-repeat="player in stats.players | orderBy:'username'">
+                    
+              <sqd-avatar src="{{player.avatar}}" letter-from="{{player.first_name || player.username}}"></sqd-avatar>
+
+                    
+     <span class="black">{{player.username}}</span>
+                    
+                     <span class="item-note white">
+     
+       
+     <i class="energized ion-android-done-all" ng-show="player.solved"></i>
+         
+            
+    </span>
+                    <div ng-show="player.attempts">
+          <span class="grey"><i class="ion-android-done positive"></i> {{player.attempts}} </span>
+                    
+           
+                        </div>
+          
+                                     
+                          </ion-item>
+                
+    
+
+                            <div style="marin-left:5px;margin-right:5px">
+           
+             <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="$state.go('main.create')">
+   Create Squidle
+</button>
+                </div>
+            </ion-list>
+
+        
+        </div>
+
+</div>
+
+    </ion-content>
+    
+    
+      <!--  <ion-footer-bar class="bar-clear" >
+
+   
+       
+<div class="full padding-horizontal">
+       
+                  
+
+    </div>
+    </ion-footer-bar>
+-->
+
+</ion-view>

@@ -1,0 +1,46 @@
+<h1><code ng:non-bindable="">subscriptions</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-subscriptions-page"><p>This is a service that is returned as part of subscriptionsProvider. Used to deal with creating a subscription or checking whether a user has subscribed through Google Play or the App Store.</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">subscriptions($q, stores, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-subscriptions-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>stores</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-subscriptions-page"><p>Service used to interface with the html5 local storage</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-subscriptions-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-subscriptions-page"><p>Service object exposing methods - create, read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(username)</h3>
+<div class="create"><div class="create-page"><p>Sends user to Google Play or App store. Once they confirm a subscription the user is returned to Squidler where the subscirption information is sent to Squidler back-end to be stored.</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>username</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="create-page"><p>Username to be used to create a Squidler subscription</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>Resolves if subscription has been successfully created otherwise it is rejected</p>
+</div></td></tr></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">subscriptions.create('joblogs')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_read">read(username)</h3>
+<div class="read"><div class="read-page"><p>Checks to see if the user has a valid subscription</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>username</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Username to be used to create a Squidler subscription</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves if subscription has been successfully created otherwise it is rejected</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">subscriptions.read()</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_verify">verify(username)</h3>
+<div class="verify"><div class="verify-page"><p>Checks to see if the user has a valid subscription</p>
+</div><h5 id="methods_verify_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>username</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="verify-page"><p>Username to be used to create a Squidler subscription</p>
+</div></td></tr></tbody></table><h5 id="methods_verify_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="verify-page"><p>Resolves if subscription has been successfully created otherwise it is rejected</p>
+</div></td></tr></table><h4 id="methods_verify_example">Example</h4>
+<div class="example"><div class="verify-page"><pre class="prettyprint linenums">subscriptions.verify()</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

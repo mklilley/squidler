@@ -1,0 +1,64 @@
+
+.sqd-squidles{
+    
+    .spinner svg {
+  stroke: $energized;
+  fill: $energized;
+}
+    
+      .item-avatar.activated, .item.activated, .item-complex.activated, .item-content.activated {
+    background-color: #62656B;
+ 
+   
+}
+
+ .item-avatar, .item, .item-complex .item-content{
+    background-color: $background;
+    
+ 
+   
+}
+    
+    .item-avatar .item-content{
+    img, span.avatar{
+max-height: 65px!important;
+        max-width: 65px!important;
+    left:0!important;}
+    padding-left: 77px!important;
+    min-height: 97px;
+    
+}
+    
+    .item-complex .item-content{
+
+     padding:16px 16px 16px 16px;
+ 
+   
+}
+    
+    .details {
+        
+        border-style: none!important;
+    }
+    
+    .details.ng-enter {
+         -webkit-transform: translate3d(0, 0, 0);
+        -moz-transform: translate3d(0, 0, 0);
+        -ms-transform: translate3d(0, 0, 0);
+        -o-transform: translate3d(0, 0, 0);
+        transform: transale3d(0,0,0);
+        
+    -webkit-animation: slideInDown 0.4s;
+        -moz-animation: slideInDown 0.4s;
+        -ms-animation: slideInDown 0.4s;
+        -o-animation: slideInDown 0.4s;
+    animation: slideInDown 0.4s;
+}
+    
+
+    
+    
+
+
+
+}

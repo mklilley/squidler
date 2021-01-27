@@ -1,0 +1,16 @@
+
+<div class="sqd-input {{::background}} full {{::colour}}">
+
+<ion-input class="item-input full">
+
+
+  <input class="full" name="{{::name}}" type="{{::type}}" ng-attr-placeholder="{{placeholder}}" ng-model="text" ng-attr-ng-model-options="links=='true' ? { debounce: 500 }: {}"  ng-readonly="{{::ngReadonly}}" ng-attr-required="{{::sqdRequired=='true'||undefined}}"  ng-readonly="{{::ngReadonly}}" ng-focus="focus=true;valid=true" ng-blur="focus=false;validateForm()" ng-class="{white:background=='background',black:background!='background'}" ng-maxlength={{::maxlength}}  directive-if="{'checkForLinks': 'links==\'true\'', 'noSpaces':'nospaces==\'true\''}">
+
+     <ion-label style="padding-right:40px;font-size: 25px;" ng-class="{'ion-close-circled': text!='' && focus, 'sqd-icon-sad-face': text!='' && !(focus) && !(valid), white:background=='background',{{::background}}Text :background!='background'}" on-touch="clickAction()">
+
+
+    </ion-label>
+</ion-input>
+
+
+</div>

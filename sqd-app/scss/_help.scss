@@ -1,0 +1,41 @@
+
+.sqd-help{
+
+    .previous-input-focus, .cloned-text-input + input, .cloned-text-input + textarea {
+position: absolute !important;
+left: -9999px;
+width: 200px; 
+}
+
+i {
+font-size: 25px!important;
+}
+    
+    
+/*
+ * http://docs.angularjs.org/api/ng/directive/ngShow#usage_animations
+ */
+.list .item.item-accordion {
+    
+     -webkit-transform: translate3d(0, 0, 0);
+        transform: transale3d(0,0,0);
+ 
+  padding-top: 0;
+  padding-bottom: 0;
+    -webkit-transition:0.09s linear all;
+      transition: 0.09s all linear;
+    border-style: none!important;
+}
+.list .item.item-accordion.ng-hide {
+  line-height: 0px;
+}
+.list .item.item-accordion.ng-hide-add,
+.list .item.item-accordion.ng-hide-remove {
+  display: block !important;
+}
+    
+
+
+
+
+}

@@ -1,0 +1,52 @@
+
+<ion-view view-title="Help and Support" class="background sqd-help">
+
+  
+      <ion-content class="padding">
+          <div class="padding">
+    <ion-list  class="item-icon-right">
+        <div ng-repeat="FAQ in help.FAQs" ng-click="help.toggleFAQ(FAQ)">
+      <ion-item  class="white multiline" ng-class="{'no-bottom-border':help.isFAQShown(FAQ)}">
+                     
+          <div class="row no-padding" > 
+              
+              <div class="col-90">{{FAQ.question}}</div>
+              <div class="col-10">  <i class="icon" ng-class="help.isFAQShown(FAQ) ? 'sqd-icon-up-arrow' : 'sqd-icon-down-arrow'"></i></div>
+<!--    <p style="color:white"></p>-->
+              </div>
+      </ion-item>
+          <ion-item class="item-accordion grey multiline" ng-show="help.isFAQShown(FAQ)">
+            {{FAQ.answer}}
+          </ion-item>
+            </div>
+    </ion-list>
+          </div>        
+        
+      
+  </ion-content>
+    
+      <ion-footer-bar class="bar-clear">
+ <div class="full padding-horizontal">
+
+   <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="help.askQuestion.show()">
+  Ask a question
+</button>
+          </div>
+
+ </ion-footer-bar>
+<!--    
+        <div class="float-button">
+       
+            <div class="padding">
+                <div class="padding">
+        
+       
+                   <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="help.askQuestion.show()">
+  Ask a question
+</button>
+        </div>
+        
+     </div> 
+    </div>-->
+
+</ion-view>

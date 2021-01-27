@@ -1,0 +1,149 @@
+.sqd-fullscreen{
+
+
+    
+    .scroll{height:100%}
+}
+
+
+.sqd-squidle{
+    
+    .item-input input[type="text"].cloned-text-input ,.item-input textarea.cloned-text-input{
+display: none !important;
+}
+    
+.scroll{height:100%;
+   
+    }
+    
+    .iosFooterAdjust {
+         top: -60px;
+        
+    }
+    
+div.bubble {
+position: relative;
+        -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    
+   
+    /*	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;*/
+    color:white;
+        text-align: left;
+    
+    a {
+        color:white!important;
+    }
+}
+    
+    .challenge{
+     border: 0.5em solid $positive;
+    }
+    .prize {
+    border: 0.5em solid $energized;
+    }
+
+
+div.bubbleTailChallenge {
+position: relative;
+    align-self: flex-end;
+    -webkit-align-self:flex-end;
+	width: 0;
+	height: 0;
+	border: 0.3em  solid;
+    border-color: transparent $positive $positive transparent;
+	
+}
+    
+    div.bubbleTailPrize {
+position: relative;
+    align-self: flex-end;
+    -webkit-align-self:flex-end;
+	width: 0;
+	height: 0;
+	border: 0.3em  solid;
+    border-color: transparent $energized $energized transparent;
+	
+}
+    
+        div.bubbleTailClear {
+position: relative;
+    align-self: flex-end;
+    -webkit-align-self:flex-end;
+	width: 0;
+	height: 0;
+	border: 0.3em  solid;
+    border-color: transparent transparent transparent transparent;
+	
+}
+    
+    i {
+font-size: 25px;
+}
+    
+    .timer{
+    font-size: 12px;
+        margin-top: -15px;
+    }
+    
+
+    
+    .slider-pager {
+    
+bottom:75px;
+z-index: 10;    
+    }
+    
+
+
+iframe {
+
+   position: absolute;
+
+     top:0%;
+    width:100%;
+    height:100%;
+        left:0;
+    
+}
+    
+    .iframe-container {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    }
+    
+
+    
+
+    
+    
+    .content-prize {
+    max-height:100%;
+    }
+    
+        .content-challenge {
+    max-height:-webkit-calc(100% - 2*#{$font-size-base});
+    max-height:-moz-calc(100% - 2*#{$font-size-base});
+    max-height:calc(100% - 2*#{$font-size-base});
+
+    }
+    
+            .content-challenge.preview {
+    max-height:-webkit-calc(100% - 4*#{$font-size-base});
+    max-height:-moz-calc(100% - 4*#{$font-size-base});
+    max-height:calc(100% - 4*#{$font-size-base});
+
+    }
+    
+
+
+
+    
+
+
+
+}

@@ -1,0 +1,36 @@
+.sqd-search{
+    
+    
+    
+ .previous-input-focus, .cloned-text-input + input, .cloned-text-input + textarea {
+position: absolute !important;
+left: -9999px;
+width: 200px; 
+}
+    
+    
+
+.gallery {
+     -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 100%;
+    
+    img{
+        display: block;
+        margin:auto;
+    }
+}
+
+.gallery >div {
+    
+    overflow: hidden;
+    object-fit:cover; 
+    object-position: 50% 0;
+}
+
+
+}
+
+
+

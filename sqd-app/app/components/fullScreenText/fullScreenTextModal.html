@@ -1,0 +1,16 @@
+<ion-modal-view ng-class="{prize:create.activePanel=='prize', challenge:create.activePanel=='challenge', answer:create.activePanel=='answer'}" class="padding">
+    
+<form class="full" name="create.squidleForm">
+        
+<full-screen-text id="prize"  data = "create.squidle.prize" placeholder="{{::create.placeholderText.prize}}"  hide="create.hideFullScreenText(id)" ng-show="create.activePanel=='prize'" active="create.activePanel=='prize'" form="create.squidleForm" links="true" sqd-required="false"></full-screen-text>
+    
+<full-screen-text id="challenge" data="create.squidle.challenge" placeholder="{{::create.placeholderText.challenge}}"  hide="create.hideFullScreenText(id)" ng-show="create.activePanel=='challenge'" active="create.activePanel=='challenge'" form="create.squidleForm" links="true" sqd-required="true"></full-screen-text>
+
+    
+    <full-screen-text id="answer" data="create.squidle.answer" placeholder="{{::create.placeholderText.answer}}"  ng-show="create.activePanel=='answer'" active="create.activePanel=='answer'" hide="create.hideFullScreenText(id)" form="create.squidleForm" links="false"  sqd-required="true"></full-screen-text>
+    
+    
+    
+    </form>
+    
+</ion-modal-view>

@@ -1,0 +1,31 @@
+<h1><code ng:non-bindable="">exceptions</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-exceptions-page"><p>Service used to catch any errors/exceptions that are produced in a prmomise chain and log the details out to both the console and to log variable on the rootScope</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">exceptions($rootScope, $ionicLoading, $ionicPopup);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$rootScope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-exceptions-page"><p>Angular service to communicating with the rootScope of the app</p>
+</div></td></tr><tr><td>$ionicLoading</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-exceptions-page"><p>Ionic service to show and hide the loading screen</p>
+</div></td></tr><tr><td>$ionicPopup</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-exceptions-page"><p>Ionic service to create a popup</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-exceptions-page"><p>Service object exposing methods - create</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(message, promise, promise_message, silent)</h3>
+<div class="create"><div class="create-page"><p>Logs errors to the console, saves the details to a log variable and rejects the supplied promise afterwards</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>message</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="create-page"><p>Error message to display in the console and in popup</p>
+</div></td></tr><tr><td>promise <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>A promise to be rejected after the logging of the errors</p>
+</div></td></tr><tr><td>promise_message <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="create-page"><p>Error message to pass to the rejection of the promise</p>
+</div></td></tr><tr><td>silent <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="create-page"><p>It true then no popup will display
+returns {function} Function that can be used as a catch in promise chain</p>
+</div></td></tr></tbody></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">squidles.create({..data..}).then(doSomething).catch(exceptions.create('Problem creating your Squidle', deferred, 'squidles.create fail'))</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

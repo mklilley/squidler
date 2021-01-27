@@ -1,0 +1,53 @@
+<h1><code ng:non-bindable="">image</code>
+<div><span class="hint">service in module <code ng:non-bindable="">camera</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="camera-service-page camera-service-image-page"><p>This is a service used to deal with the non-UI specific parts of the camera service (i.e. not drawing or cropping)</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">image($q, Kinetic, EXIF, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-image-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>Kinetic</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-image-page"><p>Kinetic.js wrapped in angular service</p>
+</div></td></tr><tr><td>EXIF</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-image-page"><p>EXIF.js wrapped in angular service</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-image-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-image-page"><p>Service object exposing methods - load, render, save, discardChanges</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_discardchanges">discardChanges(stage, layers, objects, saved)</h3>
+<div class="discardchanges"><div class="discardchanges-page"><p>Discards any changes that have been made since the image was last saved</p>
+</div><h5 id="methods_discardchanges_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="discardchanges-page"><p>Kinetic.js stage object where the layers live</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="discardchanges-page"><p>Contains layers that have kinetic.js objects on them.</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="discardchanges-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object</p>
+</div></td></tr><tr><td>saved</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="discardchanges-page"><p>object containing information about drawings and crops made before the image was last saved. These stage will be reverted back to this state</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_load">load(dataURI)</h3>
+<div class="load"><div class="load-page"><p>Create an image object from a dataURI and extracts some useful information about it. Takes into account strange orientation problems with images takes with an iphone</p>
+</div><h5 id="methods_load_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>dataURI</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="load-page"><p>dataURI of an image (can also be a url from the web in principle)</p>
+</div></td></tr></tbody></table><h5 id="methods_load_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="load-page"><p>Resolves to an object with keys image, aspect, orientation, width, height -  if url was successfully loaded, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_load_example">Example</h4>
+<div class="example"><div class="load-page"><pre class="prettyprint linenums">image.load('data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_render">render(stage, layers, objects, image)</h3>
+<div class="render"><div class="render-page"><p>Renders a loaded image onto a kinetic layer and onto a given kinetic stage</p>
+</div><h5 id="methods_render_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="render-page"><p>Kinetic.js stage object where the image layer will be created</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="render-page"><p>Contains layers that have kinetic.js objects on them. A new &quot;image&quot; layer will be added to this &quot;layers&quot; object</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="render-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object, a new &quot;image&quot; object will be added to this &quot;objects&quot; object, which is a kinetic image with some extra properties added to take into account strange things iphone does with portrait images</p>
+</div></td></tr><tr><td>image</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="render-page"><p>JSON object containing keys image, aspect, orientation, width, height, where image is a javascript image object. This is what is returned from the &quot;image.load&quot; method</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_save">save(stage, layers, objects)</h3>
+<div class="save"><div class="save-page"><p>Saves the image and anything that has been drawn on top of it as a dataURI. Creates a backup of the current state of the image so that we can revert back if desired</p>
+</div><h5 id="methods_save_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="save-page"><p>Kinetic.js stage object where the layers live</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="save-page"><p>Contains layers that have kinetic.js objects on them.</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="save-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object</p>
+</div></td></tr></tbody></table><h5 id="methods_save_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="save-page"><p>Resolves to an object with keys image (a dataURI), saved (a backup object containing crop information and drawings to be used if we make additional changes and want to revert back to this version) -  if the image was successfully loaded, otherwise the promise is rejected.</p>
+</div></td></tr></table></div>
+</li>
+</ul>
+</div>
+</div>

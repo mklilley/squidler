@@ -1,0 +1,64 @@
+<ion-header-bar class="bar-dark">
+<div class="button-bar">
+
+    <div class="button button-icon sqd-icon-camera" ng-show="camera.isActive('start')" ng-click="camera.retake()"></div>
+
+     <div class="button button-icon sqd-icon-crop" ng-show="camera.isActive('start') || camera.isActive('crop')" ng-click="camera.initCrop()"></div>
+
+     <div class="button button-icon sqd-icon-draw" ng-show="camera.isActive('start') || camera.isActive('draw')" ng-click="camera.startDrawing()"></div>
+
+         <div class="button button-icon ion-record red" ng-show="camera.isActive('draw')" ng-click="camera.changeColour('red')" ></div>
+             <div class="button button-icon ion-record blue" ng-show="camera.isActive('draw')" ng-click="camera.changeColour('blue')"></div>
+             <div class="button button-icon ion-record green" ng-show="camera.isActive('draw')" ng-click="camera.changeColour('green')"></div>
+             <div class="button button-icon ion-record yellow" ng-show="camera.isActive('draw')" ng-click="camera.changeColour('yellow')"></div>
+
+         <div class="button button-icon sqd-icon-undo" ng-show="camera.isActive('draw') && camera.objects.lines.length>0" ng-click="camera.undo()"></div>
+
+     <div class="button button-icon sqd-icon-reset"  ng-show="camera.isActive('start') || camera.isActive('reset')" ng-click="camera.initRevert()"></div>
+
+     <div class="button button-icon sqd-icon-bin"  ng-show="camera.isActive('start') || camera.isActive('delete')" ng-click="camera.initDelete()"></div>
+
+</div>
+ </ion-header-bar>
+
+
+
+    <ion-content class="background" scroll="false">
+         <input id="attach-input-{{::id}}" type="file" accept="image/*;" capture="camera" style="display:none" onchange="angular.element(this).scope().camera.loadImage(this)" />
+
+    <div kinetic-stage style="position:relative; width:100%; height:100%;">
+
+    </div>
+
+    </ion-content>
+
+
+<ion-footer-bar class="bar-clear">
+
+
+                           <div class=" button-bar full padding-horizontal">
+
+                  <button class=" strong button button-block button-dark no-padding no-margin" ng-click="camera.cancel()">
+    Cancel
+</button>
+
+
+                  <button class=" strong button button-block button-energized no-padding no-margin" ng-click="camera.CTA()">
+    {{camera.textCTA()}}
+</button>
+
+    </div>
+
+
+<!--
+
+<div class="button-bar">
+  <a class="button button-dark"   ng-click="camera.cancel()">Cancel</a>
+
+
+  <a class="button button-energized" ng-click="camera.CTA()">
+    {{camera.textCTA()}}
+  </a>
+
+</div>-->
+ </ion-footer-bar>

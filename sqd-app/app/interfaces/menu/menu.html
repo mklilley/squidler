@@ -1,0 +1,59 @@
+<ion-view view-title="Menu" cache-view="false">
+
+<ion-side-menus enable-menu-with-back-views="false" >
+  <ion-side-menu-content>
+    <ion-nav-bar align-title="left" class="bar-dark ">
+        
+        <ion-nav-back-button class="button  button-icon sqd-icon-left-arrow"> 
+</ion-nav-back-button>
+
+      <ion-nav-buttons side="left">
+        <button class="button button-icon button-clear ion-navicon" menu-toggle="left">
+        </button>
+      </ion-nav-buttons>
+    </ion-nav-bar>
+      
+    <ion-nav-view name="main"></ion-nav-view>
+      
+  </ion-side-menu-content>
+    
+
+
+
+  <ion-side-menu side="left" class="dark">
+    <ion-header-bar class=" expanded bar-header bar-clear">
+    
+        <sqd-avatar src="{{menu.avatar}}" letter-from="{{menu.first_name || menu.username}}"></sqd-avatar>
+
+        
+      <div class="menu-bottom flamenco menu-username">{{::menu.username}}</div>
+    </ion-header-bar>
+    <ion-content scroll="false" class="has-expanded-header has-header padding">
+      <ion-list>
+       <ion-item ng-repeat="item in menu.items" menu-close ui-sref="{{::item.sref}}" ui-sref-active="activated"  class="item-icon-right" >
+         
+           
+             <h2>{{::item.title}}</h2>
+
+           <i class="icon white sqd-icon-right-arrow"></i>
+           
+           
+<!--               <i class="icon icon-img" style="background-image: url('https://raw.github.com/driftyco/ionic-site/gh-pages/img/docs/mcfly.jpg')"></i>
+        </ion-item>-->
+
+       <!-- <ion-item menu-close ng-click="login()">
+          Login
+        </ion-item>-->
+
+</ion-item>
+
+      </ion-list>
+        
+
+    </ion-content>
+  </ion-side-menu>
+</ion-side-menus>
+    
+               
+
+</ion-view>

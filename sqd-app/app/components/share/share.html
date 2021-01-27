@@ -1,0 +1,113 @@
+<ion-view view-title="Share" cache-view="false" class="sqd-share background-light">
+
+<ion-content has-bouncing="false">
+    
+    <div class = "row">
+        <div class = "col col-center">
+            
+            <ion-list>
+            <ion-item   class="text-center ">
+                <h2 class="assertive">Your locked Squidle:</h2>
+                
+                                    <button ng-click="share.copyShortLink()" class="button button-fab" style="position:absolute;top:-10px;right:-10px"><i class="ion-clipboard"></i></button>    
+                
+                <span on-tap="share.goToSquidle()">https://dev.squidler.com/#!/{{::share.short}}</span>
+                
+                </ion-item>
+                
+                <ion-item class="text-center">
+                    
+     <h2 class="black">Share it instantly via:</h2>
+                    
+<div class="wrap ">
+                    
+                    <a class="button button-fab white" style="background-color:#59C136" ng-click="share.viaSMS()"><i class="ion-android-textsms"></i></a> 
+                    
+                    <a class="button button-fab white" style="background-color:#1CA9E9" ng-click="share.viaEmail()"><i class="ion-email"></i></a>    
+                    
+                    <a ng-if="::share.allowed.whatsapp" class="button button-fab white" style="background-color:#32B01E" ng-click="share.viaWhatsapp()"><i class="ion-social-whatsapp-outline"></i></a>                     
+                    <a ng-if="::share.allowed.twitter" class="button button-fab white" style="background-color:#61AADB" ng-click="share.viaTwitter()"><i class="ion-social-twitter"></i></a>                     
+                    <a ng-if="::share.allowed.facebook" class="button button-fab white" style="background-color:#3B579D" ng-click="share.viaFacebook()"><i class="ion-social-facebook"></i></a> 
+                    
+                                        <a class="button button-fab white" style="background-color:#FF6B01" ng-click="share.viaOther()"><i class="ion-more"></i></a> 
+    </div>
+                                     
+                          </ion-item>
+               
+    
+<ion-item class="text-center" ng-if="::share.canModify">
+
+    <h2 class="black">Change the time limit:</h2>
+
+    <button style="position:absolute;bottom:0;right:0" class="button button-icon" ng-show="share.expiryChanged()" ng-click="share.updateExpiry()"><i class="sqd-icon-save positive"></i></button>
+
+    <div class="row no-padding">
+        <span class="button-small col col-offset-30 col-10 no-padding">
+                                           
+         <sqd-number model="share.hours" min="0" max="48" step="1"></sqd-number>
+
+                                            
+    </span>
+        <span class="col col-10 col-center no-padding text-left ">h</span>
+
+        <span class="button-small col-10 no-padding">
+ <sqd-number model="share.mins" min="0" max="60" step="5"></sqd-number>
+    </span>
+
+        <span class="col col-10 col-center no-padding text-left ">m</span>
+
+
+    </div>
+
+
+
+</ion-item>
+                
+                                <ion-item class="text-center" ng-if="share.canModify">
+                                    
+     <h2 class="black">Make it harder:</h2>
+                                    
+ <ion-toggle class="text-left" ng-model="share.hint" toggle-class="toggle-energized" ng-change="share.updateHint()">Hangman mode</ion-toggle>
+                                  
+
+                                     
+                          </ion-item>
+                
+    
+        <ion-item class="text-center" ng-if="!share.canModify && share.ownSquidle">
+                                    
+<span class="multiline">You can't modify this Squidle anymore because somone has already started to play with it</span>
+                                  
+
+                                     
+                          </ion-item>
+                
+                            <div style="marin-left:5px;margin-right:5px">
+           
+             <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="$state.go('main.create')">
+   Create another
+</button>
+                </div>
+            </ion-list>
+
+        
+        </div>
+
+</div>
+
+    </ion-content>
+    
+    
+      <!--  <ion-footer-bar class="bar-clear" >
+
+   
+       
+<div class="full padding-horizontal">
+       
+                  
+
+    </div>
+    </ion-footer-bar>
+-->
+
+</ion-view>

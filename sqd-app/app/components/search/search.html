@@ -1,0 +1,67 @@
+<ion-header-bar align-title="left" class="bar-dark ">
+ 
+    <button class="button button-icon sqd-icon-left-arrow" ng-click="search.hide()">
+        <!--<i class="sqd-icon-left-arrow"></i>-->
+    </button>
+
+  <h1 class="title">Search</h1>
+
+</ion-header-bar>
+
+
+<ion-content class="background padding" ng-class="{'has-footer':search.thumbs.length!=0 && !(search.searchChanged()) && !(search.keyboardUp)}" has-bouncing="false">
+    <div class="row" ng-class="{full:search.thumbs.length==0}">
+    
+        <div class="col" ng-class="{'col-center':search.thumbs.length==0}">
+            
+              <div class="row no-padding">
+                  
+                  <form name="search.searchForm" class="full">
+                     <sqd-input name="search" colour="dark" background="background" type="text" placeholder="Find an image from the web" model="search.query" form="search.searchForm" ng-readonly="false" valid="true" links="false" sqd-required="true" form="search.searchForm"></sqd-input>
+                  </form>
+                  
+
+              </div>
+            
+
+<button class=" strong button button-block button-energized" ng-click="search.submitSearch()" ng-show="search.thumbs.length==0 || search.searchChanged()">
+  Search
+</button>
+
+
+<div class="row gallery row-center" ng-show="search.thumbs.length>0">
+                <div class="col col-50 col-center" ng-repeat="thumb in search.thumbs" ng-click="search.imageSelect(thumb)">
+
+                    <img  ng-src="{{thumb.thumb}}" >
+                    </div>
+    
+    </div>
+                
+               
+
+        
+        </div>
+     </div>
+    </ion-content>
+
+
+
+<ion-footer-bar  class="bar-clear" ng-if="search.thumbs.length!=0 && !(search.searchChanged()) && !(search.keyboardUp)">
+
+   
+       
+<div class="full padding-horizontal">
+       
+                                    <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="search.submitSearch()" >
+       
+    <div class="row row-center row-middle no-padding no-margin" ng-click="search.submitSearch()" >
+        Load more
+         <i class="ion-plus-circled padding-horizontal"></i>
+    </div>
+</button>
+
+    </div>
+    </ion-footer-bar>
+
+
+

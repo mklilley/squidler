@@ -1,0 +1,42 @@
+.sqd-welcome {
+    
+    .previous-input-focus, .cloned-text-input + input, .cloned-text-input + textarea {
+position: absolute !important;
+left: -9999px;
+width: 200px; 
+}
+    
+    h3 {
+    color: white;
+        letter-spacing:0.04em;
+    }
+    
+        h5 {
+    color: white;
+        letter-spacing:0.04em;
+    }
+    
+    .steps-container {
+    
+        width:90%;
+        margin:auto;
+    }
+    
+    .small-text {
+    font-size: $font-size-small;
+    }
+    
+    .logo-container {
+        position: relative;
+    height: 200px;
+    }
+    
+    .logo {
+    height:100%;
+    }
+
+
+
+    
+}
+

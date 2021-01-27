@@ -1,0 +1,40 @@
+<h1><code ng:non-bindable="">crop</code>
+<div><span class="hint">service in module <code ng:non-bindable="">camera</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="camera-service-page camera-service-crop-page"><p>This is a service used do crop an image through user interaction</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">crop($q, Kinetic, EXIF, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-crop-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>Kinetic</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-crop-page"><p>Kinetic.js wrapped in angular service</p>
+</div></td></tr><tr><td>EXIF</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-crop-page"><p>EXIF.js wrapped in angular service</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-crop-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-crop-page"><p>Service object exposing methods - start, finish, cancel</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_cancel">cancel(layers)</h3>
+<div class="cancel"><div class="cancel-page"><p>Cancels the current crop</p>
+</div><h5 id="methods_cancel_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="cancel-page"><p>Contains layers that have kinetic.js objects on them</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_finish">finish(stage, layers, objects, imgOrig)</h3>
+<div class="finish"><div class="finish-page"><p>Renders a loaded image onto a kinetic layer and onto a given kinetic stage</p>
+</div><h5 id="methods_finish_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="finish-page"><p>Kinetic.js staage object where the image layer is</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="finish-page"><p>Contains layers that have kinetic.js objects on them</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="finish-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object</p>
+</div></td></tr><tr><td>imgOrig</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="finish-page"><p>JSON object containing keys image, aspect, orientation, width, height, where image is a javascript image object. This is what is returned from the &quot;image.load&quot; method and stored as a backup</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_start">start(stage, layers, objects)</h3>
+<div class="start"><div class="start-page"><p>Initialises the copping interface</p>
+</div><h5 id="methods_start_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Kinetic.js staage object where the image layer is</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Contains layers that have kinetic.js objects on them</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>

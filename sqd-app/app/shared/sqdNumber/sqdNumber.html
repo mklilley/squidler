@@ -1,0 +1,16 @@
+
+<div >
+
+
+      <button type="button" class="button button-clear button-small button-positive"  ng-click="increase()" ng-disabled="disabled ||  model==max">
+
+        <i class="icon ion-chevron-up"></i></button>
+
+          <input ng-model="model" type="number" min="{{::min}}" max="{{::max}}" ng-change="share.computeExpiry()" class="text-center" step="{{::step}}" restrict-min-max>
+
+      <button type="button" class="button button-clear button-small button-positive " ng-click="decrease()" ng-disabled="disabled ||  model==min">
+        <i class="icon ion-chevron-down"></i></button>
+
+
+
+</div>

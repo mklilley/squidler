@@ -1,0 +1,28 @@
+<h1><code ng:non-bindable="">imgur</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-imgur-page"><p>This is a service used to extract image imformation from an imgur link, e.g, thumbnail and full image links</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">imgur($q, $http, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-imgur-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-imgur-page"><p>Angular http service</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-imgur-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-imgur-page"><p>Service object exposing methods - read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_read">read(url)</h3>
+<div class="read"><div class="read-page"><p>Extracts image information from an Imgur link</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>url</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Url of Imgur page</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object of the form - {thumb: string, type: &#39;image&#39;, url: string} -  if url was successfully processed, otherwise the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">youtube.read('http://imgur.com/gallery/whrgItd')</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

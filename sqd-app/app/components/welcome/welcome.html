@@ -1,0 +1,160 @@
+<ion-view view-title="Welcome" cache-view="false" class="sqd-welcome">
+
+
+        <ion-slide-box on-slide-changed="welcome.slideChanged(index)">
+            
+            <!----------------Slide 1------------->
+            
+          <ion-slide class="white no-padding">
+              
+        
+                
+              <div class="row row-center full" ng-hide="welcome.debugMode">
+              
+              <div class="col">
+                  
+                              <h3 class="no-margin">Welcome to Squidler!</h3>
+            <div class="logo-container padding">
+              <img ng-click="welcome.changeLogo()" ng-src="{{welcome.logo}}" class="logo">
+            </div>
+            
+                  Where messaging meets gaming 
+          
+                  
+                  </div>
+                  
+
+              
+              
+              </div>
+                  
+                   <div class="row full" ng-show="welcome.debugMode">
+                       
+                             
+                  
+                                    <div class="col" >
+                                        
+                                    
+                 <div class="padding-bottom">
+          <sqd-input colour="dark" background="background" name="api" type="text" placeholder="product id" model="welcome.productId" ng-readonly="false" valid="true" links="false"></sqd-input>
+        </div>
+                                        
+                      <div class="button-bar">
+                      <button class="button button-block button-energized" ng-click="welcome.testBuy()">Test buy</button>
+                      <button class="button button-block button-positive" ng-click="welcome.testRestore()">Test restore</button>
+                          </div>
+                                        <hr/>
+                                        
+                                              <div class="padding-bottom">
+          <sqd-input colour="dark" background="background" name="api" type="text" placeholder="api for subscription verification" model="welcome.api" ng-readonly="false" valid="true" links="false"></sqd-input>
+        </div>
+                                        
+                                         <div class="button-bar">
+                      <button class="button button-block button-assertive" ng-click="welcome.testVerify()">Test verify</button>
+                          </div>
+                                        
+                                         <hr/>
+                                        
+                                        <h2>Log</h2>
+                      <div class="white" ng-repeat="message in welcome.debugMessages">
+                      <strong>{{message.message}}</strong> <br/>
+                          {{message.data}}
+                      </div>
+                  </div>
+                  </div>
+                  
+                  
+     
+
+          </ion-slide>
+            
+            
+            <!----------------Slide 2------------->
+            
+          <ion-slide class="white no-padding">
+              
+                 
+              <div class="row row-center full">
+              
+              <div class="col">
+                  
+                              <h3>How it works:</h3>
+
+
+                  
+                  <div class="steps-container">
+                      
+            <ion-list class="text-left">
+                  
+                  <ion-item>
+                <div class="white multiline"><strong>1.</strong> Craft your message</div>
+                      <div class="grey multiline small-text">
+                       you can send text, image, animation, or video
+                      </div>
+                
+                </ion-item>
+                
+                <ion-item>
+                    <div class="white multiline">
+                        <strong>2.</strong> Lock it with a question</div>
+                    
+                    <div class="grey multiline small-text">
+                        try something challenging that your friend will find fun 
+                    </div>
+                    
+                    
+                </ion-item>
+                
+                
+                <ion-item>
+                    
+                    <div class="white multiline">
+                
+                        <strong>3.</strong> Share it via your favourite social or messaging app</div>
+                    
+                    <div class="grey multiline small-text">
+                        no one can see your squidle unless they answer your question correctly 
+                    </div>
+                </ion-item>
+                  
+                  
+                  </ion-list>
+             
+
+                  
+                  </div>
+                  
+              </div>
+                  
+                  </div>
+
+              
+          </ion-slide>
+            
+            
+            <!----------------Slide 3------------->
+            
+          <ion-slide class="white no-padding">
+              
+               <div class="row row-center full">
+              
+              <div class="col">
+                  
+            <h3>To get started:</h3>
+                  <br>
+                  
+                  We <strong>don't</strong> need your email or number because we don't believe in selling your data.
+                  <br/><br/>
+              
+              Just choose a unique username and we'll sort the rest out.<br/><br/>
+
+              <button class="button  button-positive" ng-click="welcome.letsGo()">Let's go</button>
+            
+                  
+                   </div>
+              </div>
+                  
+          </ion-slide>
+        </ion-slide-box>
+
+</ion-view>

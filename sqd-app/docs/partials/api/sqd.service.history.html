@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">history</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-history-page"><p>This is a service that is returned as part of historyProvider. Used to retrieve a history of the Squidles that have either been created or viewed by the user</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">history($q, resources, squidles, stores, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>resources</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Service to communicate with backend resources</p>
+</div></td></tr><tr><td>squidles</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Service to handle creating/reading/updating Squidles</p>
+</div></td></tr><tr><td>stores</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Service used to interface with the html5 local storage</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-history-page"><p>Service object exposing methods - read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_read">read(options)</h3>
+<div class="read"><div class="read-page"><p>Retrieves the Squidle history of a user</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="read-page"><p>If it contains the key &quot;refreshAll&quot; with value true then each entry of the history will be refreshed, otherwise only new squidles will be added</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an array of squidle objects (see squidles.read for more details on the structure of those objects)</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">history.read()</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

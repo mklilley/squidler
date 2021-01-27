@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">links</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-links-page"><p>This is a service used to extract image or video imformation from a link contained within some input text</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">links($q, $http, youtube, imgur, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Angular http service</p>
+</div></td></tr><tr><td>youtube</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Service to extract video information from a youtube link</p>
+</div></td></tr><tr><td>imgur</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Service to extract image information from an imgur link</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-links-page"><p>Service object exposing methods - read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_read">read(text)</h3>
+<div class="read"><div class="read-page"><p>Reads some text and processes the first link inside it, either by shortening it or extracting it and replacing it with the image/video information contained within it.</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>text</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Any piece of text</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object of the form - {text: string, data: object}. Data is an object of the form {thumb: string, type: string, url: string} provided by a data service such as imgur or youtube (if no url in the text the data key is not produced). Text is a string that contains the initial input text, either without any url if data can be extracted from it, otherwise the url is shortened.  If a url contained within the text cannot be processed the promise is rejected</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">link.read('OMG this is soooooo funny http://imgur.com/gallery/whrgItd')</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

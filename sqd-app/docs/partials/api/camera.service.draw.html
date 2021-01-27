@@ -1,0 +1,39 @@
+<h1><code ng:non-bindable="">draw</code>
+<div><span class="hint">service in module <code ng:non-bindable="">camera</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="camera-service-page camera-service-draw-page"><p>This is a service used to draw on an kineticjs image</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">draw($rootScope,, Kinetic);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$rootScope,</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-draw-page"><p>Angular rootScope service</p>
+</div></td></tr><tr><td>Kinetic</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-draw-page"><p>Kinetic.js wrapped in angular service</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="camera-service-page camera-service-draw-page"><p>Service object exposing methods - start, stop, undo</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_start">start(stage, layers, objects, colour)</h3>
+<div class="start"><div class="start-page"><p>Creates the events listeners that watch for user interaction with the image then draw those onto the image</p>
+</div><h5 id="methods_start_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Kinetic.js staage object where the image layer is</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Contains layers that have kinetic.js objects on them, a key named &quot;drawing&quot; must be present whose value must be a kinetic.js layer</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object, a key named &quot;lines&quot; must be present whose value must be an array of kinetic.js lines</p>
+</div></td></tr><tr><td>colour</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="start-page"><p>The key of this object named &quot;value&quot; must be the colour of the line that is to be drawn</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_stop">stop(objects)</h3>
+<div class="stop"><div class="stop-page"><p>Removes the event listeners from a kineticjs image so that the imge no longer responds to touch/click.  Essentially this turns drawing mode off</p>
+</div><h5 id="methods_stop_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="stop-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object, a key named &quot;image&quot; must be present whose value must be a kinetic.js image</p>
+</div></td></tr></tbody></table></div>
+</li>
+<li><h3 id="methods_undo">undo(stage, layers, objects, all)</h3>
+<div class="undo"><div class="undo-page"><p>Undoes lines that have been drawn.</p>
+</div><h5 id="methods_undo_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>stage</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="undo-page"><p>Kinetic.js stage object where the drawing layer is</p>
+</div></td></tr><tr><td>layers</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="undo-page"><p>Contains layers that have kinetic.js objects on them, a key named &quot;drawing&quot; must be present whose value must be a kinetic.js layer</p>
+</div></td></tr><tr><td>objects</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="undo-page"><p>Contains objects that have been drawn onto the various layers defined in the layers object, a key named &quot;lines&quot; must be present whose value must be an array of kinetic.js lines</p>
+</div></td></tr><tr><td>all</td><td><a href="" class="label type-hint type-hint-bool">bool</a></td><td><div class="undo-page"><p>Boolean to determine whether to undo all the line or just the previous one</p>
+</div></td></tr></tbody></table></div>
+</li>
+</ul>
+</div>
+</div>
