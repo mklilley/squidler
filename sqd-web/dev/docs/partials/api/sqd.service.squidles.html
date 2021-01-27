@@ -1,0 +1,107 @@
+<h1><code ng:non-bindable="">squidles</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-squidles-page"><p>This is a service that is returned as part of squidlesProvider. Used to create, read and updates squidles</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">squidles($q, $rootScope, resources, files, stores, profiles, exceptions, credits);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$rootScope</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Angular rootScope service</p>
+</div></td></tr><tr><td>resources</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service to communicate with backend resources</p>
+</div></td></tr><tr><td>files</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service used to upload image files to the backend</p>
+</div></td></tr><tr><td>stores</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service used to interface with the html5 local storage</p>
+</div></td></tr><tr><td>profiles</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service used to retrieve and update a user&#39;s profile</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service to catch a failed promise</p>
+</div></td></tr><tr><td>credits</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service to update users credits after a hint has been received</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-squidles-page"><p>Service object exposing methods - create, read, update</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(squidle)</h3>
+<div class="create"><div class="create-page"><p>Creates a squidle</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>squidle</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="create-page"><p>Object containing all the squidle data. Main keys: challenge, prize, answer. Sub keys: text photo, video.  Each Sub key must have at least a value key. Answer can only have a text key (see backend api for more details)</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>Resolves to an object that contains all the original squidle data in adition to the following keys: short, op, expiresAt (see backend squidles api for more details), if the squidle is successfully created, otherwise the promise is rejected. Note, photo values must either be urls from the web or base64 dataURIs which will be converted to jpeg and uploaded to the squidler server</p>
+</div></td></tr></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">squidles.create(
+challenge: {
+    text: {
+        value: 'What is my favourite colour'
+    },
+    photo: {
+        value: 'data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7',
+        uploaded: true
+    }
+},
+prize: {
+    text: {
+        value: 'When everyone in the office has a cough'
+    },
+    video: {
+        value: 'https://youtu.be/IVFHyZSXKMw'
+    }
+},
+answer: {
+    text: {
+        value: 'blue',
+        hint: '••••'
+    }
+})</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_gethint">getHint(short)</h3>
+<div class="gethint"><div class="gethint-page"><p>Gets a hint for a Squidle and updates the locally stored squidle data accordingly</p>
+</div><h5 id="methods_gethint_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>short</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="gethint-page"><p>Short link for the squidle you want to get a hint on</p>
+</div></td></tr></tbody></table><h5 id="methods_gethint_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="gethint-page"><p>Resolves if a hint was successfully received otherwise it rejects</p>
+</div></td></tr></table><h4 id="methods_gethint_example">Example</h4>
+<div class="example"><div class="gethint-page"><pre class="prettyprint linenums">squidles.getHint('VJ08tg6')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_read">read(squidle)</h3>
+<div class="read"><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>squidle <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="read-page"><p>Must contain the key &quot;short&quot;, i.e. the id of the squidle to be read.  If &quot;guess&quot; key is also present the a request will be made to retrive the prize of the squidle. If no squidle is presented then all stored squidles will be returned</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object that contains the following keys: challenge, answer (only the hints), short, op, expiresAt.  If a guess is provided and is correct the object contains a prize and short keys. If the squidle cannot be read or the answer provided is incorrect the promise is rejected. (see backend squidles api for more details). If no squidle is presented then all stored squidles will be returnd as an object whose keys are the shortlink</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">squidles.read({short:'VJ08tg6', guess:'blue'})</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_remove">remove(squidle)</h3>
+<div class="remove"><div class="remove-page"><p>Removes a squidle. If you are the OP then it removes it from the server entirely, otherwise it just removes it from your history on the device and the server</p>
+</div><h5 id="methods_remove_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>squidle</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="remove-page"><p>Must contain the key &quot;short&quot;,  i.e. the id of the squidle to be removed and a the key &quot;sent&quot; indicating whether the user sent this squidle or received it.</p>
+</div></td></tr></tbody></table><h5 id="methods_remove_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="remove-page"><p>Resolves if squidle was successfully removed and rejects otherwise</p>
+</div></td></tr></table><h4 id="methods_remove_example">Example</h4>
+<div class="example"><div class="remove-page"><pre class="prettyprint linenums">squidles.remove({short:'VJ08tg6',sent:true})</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_updatable">updatable(short)</h3>
+<div class="updatable"><div class="updatable-page"><p>Checkes to see if a squidle can be updated be the OP. If someone has already seen the squidle then further updates are blocked</p>
+</div><h5 id="methods_updatable_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>short</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="updatable-page"><p>Short link for the squidle you want to check on</p>
+</div></td></tr></tbody></table><h5 id="methods_updatable_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="updatable-page"><p>Resolves to true if the squidle can be updated, otherwise it resolves to false</p>
+</div></td></tr></table><h4 id="methods_updatable_example">Example</h4>
+<div class="example"><div class="updatable-page"><pre class="prettyprint linenums">squidles.updatable('VJ08tg6')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_update">update(squidle, field)</h3>
+<div class="update"><div class="update-page"><p>Updates a Squidle</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>squidle</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="update-page"><p>Object containing the squidle data to be updated. This must include a &quot;short&quot; key to identify the squidle to be updated. To update hint an &quot;answer&quot; and &quot;hintOn&quot; key must be present, hintOn = true sets hints to be consistent with  answer.text.value, hintsOn=false removes the hint altogether. To update expiry an &quot;expiresAt&quot; key must be present with sub keys: interval (e.g. &#39;hour&#39;, &#39;day&#39;, &#39;week&#39;) and units (integer)</p>
+</div></td></tr><tr><td>field</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Name of the part of the squidle to be updated, currently only &#39;expiry&#39; or &#39;hint&#39;</p>
+</div></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="update-page"><p>Resolves to an object that contains the following keys: challenge, answer, short, op, expiresAt, if the squidle was updated successfuly, oterwise the promise is rejected. (see backend squidles api for more details)</p>
+</div></td></tr></table><h4 id="methods_update_example">Example</h4>
+<div class="example"><div class="update-page"><pre class="prettyprint linenums">squidles.update({
+short:VJ08tg6,
+hintsOn:true,
+answer:{
+text:{
+value:'blue',
+hint:••••}}})</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

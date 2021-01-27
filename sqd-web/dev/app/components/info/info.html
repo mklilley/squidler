@@ -1,0 +1,163 @@
+
+<ion-view view-title="About" class="background sqd-welcome">
+    <ion-nav-title>
+        {{history.backView.title || "Menu"}}
+    </ion-nav-title>
+
+    <ion-content class="white text-center" has-bouncing="false" overflow-scroll="true" >
+
+        <div class="row row-center min-full">
+
+            <div class="col">
+
+                <h1 class="white" style="letter-spacing:0.04em;margin-bottom:0;">Squidler</h1>
+                Version {{::info.version}}
+                <div class="logo-container padding">
+                    <img ng-click="info.changeLogo()" ng-src="{{info.logo}}" class="logo">
+                </div>
+
+                &#169;2016 Level 8 Limited <br>
+                All rights reserved. <br>
+                <a ng-href="{{::BASE}}/w/privacy" target="_blank">Privacy policy</a> <br>
+                <a ng-href="{{::BASE}}/w/terms" target="_blank">Terms and Conditions</a>
+
+
+            </div>
+
+            <i class="ion-ios-arrow-down" ng-click="info.pageDown(1)"></i>
+
+
+
+        </div>
+
+
+        <!----------------Slide 2------------->
+
+
+
+
+        <div class="row row-center min-full ">
+
+            <div class="col">
+
+                <div class="padding">
+
+                    <h3>Turns messaging into a game:</h3>
+
+
+                    Challenge your friends in a fun and unique way by sending them a locked message which they can only unlock by answering a question you set
+
+                    <i class="ion-ios-arrow-down" ng-click="info.pageDown(2)"></i>
+
+                </div>
+            </div>
+        </div>
+
+
+        <!----------------Slide 3------------->
+
+
+        <div class="row row-center min-full ">
+
+            <div class="col">
+
+                <h3 style="margin-bottom:0px;">How it works:</h3>
+
+
+
+                <div class="padding-horizontal">
+
+                    <ion-list class="text-left">
+
+                        <ion-item class="padding-vertical">
+                            <div class="white multiline"><strong>1.</strong> Craft your message</div>
+                            <div class="grey multiline small-text">
+                                send text, image, animation, or video
+                            </div>
+
+                        </ion-item>
+
+                        <ion-item  class="padding-vertical">
+                            <div class="white multiline">
+                                <strong>2.</strong> Lock it with a question</div>
+
+                            <div class="grey multiline small-text">
+                                try something challenging that your friend will find fun
+                            </div>
+
+
+                        </ion-item>
+
+
+                        <ion-item  class="padding-vertical">
+
+                            <div class="white multiline">
+
+                                <strong>3.</strong> Share it via your favourite social or messaging app</div>
+
+                            <div class="grey multiline small-text">
+                                no one can see your Squidle unless they answer your question correctly
+                            </div>
+                        </ion-item>
+
+
+                    </ion-list>
+
+
+
+                </div>
+
+            </div>
+
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--<div class="row padding">-->
+        <!--<div class="col">-->
+        <!--<h1 class="white" style="letter-spacing:0.04em;">Squidler</h1>-->
+        <!--<div class="logo-container padding">-->
+        <!--<img ng-click="info.changeLogo()" ng-src="{{info.logo}}" class="logo">-->
+        <!--</div>-->
+        <!--</div>-->
+
+        <!--</div>-->
+
+        <!--<div class="row padding">-->
+
+        <!--<p class="full">Version 0.1.7</p>-->
+
+        <!--</div>-->
+
+        <!--<div class="row padding">-->
+        <!--<p class="full"> We don't believe in selling your data so your email is safe with us. More on privacy and terms of use <a ng-href="">here</a> </p>-->
+        <!--</div>-->
+
+
+
+        <!--<div class="row padding">-->
+        <!--Squidler turns messaging into a game <br/><br/>-->
+        <!--</div>-->
+
+        <!--<div class="row padding">-->
+        <!--Challenge your friends in a fun and unique way by sending them a locked message which they can only unlock by answering a personal question you set.-->
+        <!--<br/><br/>-->
+        <!--</div>-->
+        <!---->
+        <!--<div class="row padding">-->
+        <!--This is how it works: <br/>-->
+        <!--1. Craft a message - you can send text, image, animation, or video <br/>-->
+        <!--2. Lock it with a question – try something challenging that your friend will find fun  <br/>-->
+        <!--3. Share it via your favourite social channel or messaging app <br/> <br/>-->
+
+        <!--</div>-->
+    </ion-content>
+</ion-view>

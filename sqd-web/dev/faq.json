@@ -1,0 +1,50 @@
+{ "faqs":[
+            {
+                "q":"Who can see my Squidle?",
+                "a":"A Squidle is something anyone can see if they have the Squidle link, but only those who can solve it can get the prize."
+            },
+            {
+                "q":" After I have locked my Squidle I get a link, what is it for?",
+                "a":"This is used to share your Squidle with your friends, click on this link and it will take you to your Squidle"
+            },
+            {
+                "q":"I have created a Squidle but how do i send it to a friend?",
+                "a":"Squidler allows you to send a Squidle via your favourite messaging platform.  Just copy and paste the Squidle link into your preferred app, e.g. email, WhatsApp, sms and off you go"
+            },
+
+            {  "q":" Can I share a Squidle with lots of people?",
+                "a":"Absolutely! Just copy and paste the Squidle link into your preferred app, e.g. Twitter, Reddit"
+            },
+			{"q":"How can I see whether my friend has solved my Squidle?",
+			"a":"Find your Squidle in the Squidles list, then either long hold or swipe left to see 3 options, select the yellow Squidle stats button, you can then see information on who has attempted and/or solved your Squidle. We sort by the order in which players solve the Squidle (fastest player at the top), then we sort alphabetically for those who have yet to solve your Squidle"
+			},
+			{
+                "q":"Can I attach stuff to my Squidle?",
+                "a":"Absolutely! You can attach images, animations and YouTube videos."
+            },
+			{
+                "q":"How do I attach online content to my Squidle?",
+                "a":"You can use the in-app-browser - navigate to the image, animation, or YouTube video you want to attach and then simply close the browser. Alternatively paste the link to your content into the text boxes - Any links ending in .jpg, .png, .jpeg, .gif or .gifv will work -  You can also use links to imgur e.g. imgur.com/gallery/H5Xw4dh, Giphy, e.g. http://giphy.com/gifs/foxhorror-creepy-natalie-portman-black-swan-l0HlALD9LvQQ4F3kA and YouTube e.g. https://youtu.be/zSIxxteqyXY"
+            },
+			{"q":"I need help attaching an image from Google search",
+			"a":"Using the in-app-browser search for an image, then select the image you want, then tap the 3 vertical dots to the right and select 'View Original Image', then close the browser and the image will be attached "
+			},
+			{"q":"Can I change the lifetime of my Squidle?",
+                "a":"Yes you can. The default is 24 hours, but can be as short as 5 mins and as long as 48 hours. Change it on the share screen (either long hold or swipe left on your Squidle and then select the orange share icon)"},
+			{"q":"What is a hint?", "a":"When you request a hint you get a single character from the answer to the Squidle. Everyone gets the hints in the same order"},
+			{"q":"Can someone see if I have asked for a hint to their Squidle?",
+            "a":"No"},
+			  {"q": "Can I stop people from getting hints to Squidles I send them?",
+            "a": "Yes. Find your Squidle in the Squidles list, then either long hold or swipe left to see 3 options. Now, select the orange share icon and at the bottom  of the share page you have the option to 'Make it harder' by disabling hints."},
+            {"q":"Can I make my Squidle harder?",
+                "a":"Yes you can - go to the share screen (either long hold or swipe left on your Squidle and then select the orange share icon), scroll down and select 'disable hints'. Players will not longer be able to requests hints to your Squidle "},
+            {"q":"Can I delete my Squidle?",
+                "a":"Yes - swipe or tap and hold on a Squidle to show the delete button. Deleting a Squidle that you own deletes it from our servers so people can no longer attempt your Squidle. If you didn't create the Squidle then deleting simply removes it from your phone and removes all records of you viewing it from our servers."},
+			{"q":"Images are not correctly loading, how can i fix this?","a":"Try clearing your image cache in settings, this usually fixes the problem"},
+			{"q":"Can I use Squidler on multiple devices?","a":"Not yet. If you log-in to a second device you will be logged out of the first"},
+			{"q":"Why can't I use Squidler on iOS less than version 9?","a":"Squidler uses so called universal (or deep) links to load Squidles in the app if you have it, otherwise it will load a web version. iOS only started supporting such links from iOS 9 onward"},
+			{"q":"I can't see my Squidles in the Squidles List","a":"Pull down to refresh your Squidles list. Some devices are a bit buggy so the list fails to auto refresh from time to time. If you continue to have this problem, please send us a message from the Help and Support area"},
+			{"q":"Squidle links don't load in the app, instead they load in my browser. How do I fix this?","a":"Some aps use their own web browsers to load links - if this is your situation please try loading the link in your normal web browser, or if the option exists load into the Squilder app. Sometimes the default loading behaviour has been changed accidentally by the user, to fix this: Android - Go to settings, then apps, then find the app where the Squidle link is not loading correctly from and select 'clear defaults', then try loading the link again, iOS -  Long hold on a Squidle link and it should give you the option to load in the Squidler app"}
+],
+"success":true
+}

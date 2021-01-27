@@ -1,0 +1,30 @@
+<h1><code ng:non-bindable="">time</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-time-page"><p>This is a service used to process time information relating to the squidle expiry the aid in the creation of a countdown</p>
+</div></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_hourminsec">hourMinSec(timeSecs)</h3>
+<div class="hourminsec"><div class="hourminsec-page"><p>Takes seconds and returns hours mins seconds</p>
+</div><h5 id="methods_hourminsec_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>timeSecs</td><td><a href="" class="label type-hint type-hint-integer">integer</a></td><td><div class="hourminsec-page"><p>Some number of seconds</p>
+</div></td></tr></tbody></table><h5 id="methods_hourminsec_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="hourminsec-page"><p>Key &quot;string&quot; gives something of the form 22h 23m 6s. Key array gives something of the form [22,23,6]</p>
+</div></td></tr></table><h4 id="methods_hourminsec_example">Example</h4>
+<div class="example"><div class="hourminsec-page"><pre class="prettyprint linenums">time.hourMinSec(45632)</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_remaining">remaining(expiresAt)</h3>
+<div class="remaining"><div class="remaining-page"><p>Calculates the number of seconds remaining before the squidle expires</p>
+</div><h5 id="methods_remaining_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>expiresAt</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="remaining-page"><p>Unix time (number of seconds since 1st Jan 1970)</p>
+</div></td></tr></tbody></table><h5 id="methods_remaining_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-int">int</a></td><td><div class="remaining-page"><p>Seconds remaining</p>
+</div></td></tr></table><h4 id="methods_remaining_example">Example</h4>
+<div class="example"><div class="remaining-page"><pre class="prettyprint linenums">time.remaining(1470419314)</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

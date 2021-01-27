@@ -1,0 +1,104 @@
+
+<ion-view view-title="Squidles" class="background sqd-squidles">
+
+    <ion-nav-title>
+        {{history.backView.title || "Menu"}}
+    </ion-nav-title>
+
+  <ion-content class="padding" has-bouncing="false">
+
+
+      <div class="padding">
+
+          <!----------------Squidles list------------->
+
+    <ion-list  id="walk-squidles">
+
+
+     <ion-item ng-repeat="(id, squidle) in squidles.list | orderBy:'-timeRemaining'" ng-click="squidles.goToSquidle(squidle.id)" class="item-avatar item-remove-animate"   >
+
+         <sqd-avatar src="{{squidle.avatar}}" letter-from="{{squidle.username}}"></sqd-avatar>
+
+  <span class="white username strong">{{squidle.username}} </span>
+    <span class="item-note white">
+
+
+     <i ng-hide="squidle.alreadyAnswered" class="challengeText sqd-icon-challenge"></i>
+
+
+    </span>
+          <div class="white"><i class="sqd-icon-clock"></i> {{squidles.countDown(squidle.timeRemaining)}} </div>
+
+           <div class="grey no-padding" style="overflow:hidden;text-overflow: ellipsis;white-space: nowrap;width:100%">
+
+<!--               <i ng-show="squidle.hasAttachment" class="sqd-icon-attach grey"></i>-->
+
+               {{squidle.description}}</div>
+
+
+
+
+
+      </ion-item>
+
+
+
+
+    </ion-list>
+
+
+
+          <!----------------Empty Squidles history------------->
+
+          <div ng-if="objectKeys(squidles.list).length==0">
+
+          <div class="row row-center full welcomeBack">
+
+              <div class="col">
+
+                              <h3 class="white  text-center">Welcome Back!</h3>
+
+
+
+
+
+
+
+
+
+                      <div class="white multiline padding-top text-center">Let's start making some of those lovely Squides together</div>
+
+
+
+
+
+
+
+              </div>
+
+                  </div>
+          </div>
+
+
+
+
+          </div>
+
+  </ion-content>
+
+    <ion-footer-bar class="bar-clear  padding-horizontal" keyboard-attach>
+
+
+
+<div class="full padding-horizontal">
+
+                   <button class=" strong button button-block button-energized no-padding no-margin" ng-click="squidles.createSquidle()">
+    Create Squidle
+</button>
+
+    </div>
+    </ion-footer-bar>
+
+
+
+</ion-view>

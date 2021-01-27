@@ -1,0 +1,842 @@
+/*
+To customize the look and feel of Ionic, you can override the variables
+in ionic's _variables.scss file.
+
+For example, you might change some of the default colors:
+
+$light:                           #fff !default;
+$stable:                          #f8f8f8 !default;
+$positive:                        #387ef5 !default;
+$calm:                            #11c1f3 !default;
+$balanced:                        #33cd5f !default;
+$energized:                       #ffc900 !default;
+$assertive:                       #ef473a !default;
+$royal:                           #886aea !default;
+$dark:                            #444 !default;
+*/
+
+$energized:                       #FBAB00;
+$dark:                            #2E3336;
+//$background:                       #212224;
+//lui
+//$background:                       #4A4A4A;
+$background:                       #3F3F3F;
+$assertive:                       #F13601;
+$positive:                        #FF6B01;
+$red:                              #FF2A01;
+//$blue:                              #0AAECA;
+$blue:                              #116DD9;
+$green:                             #0BCA6A;
+$yellow:                            #F4E101;
+$light:                             #EDEDED;
+//lui
+//$lighter:                            #656565;
+$lighter:                             #5B5B5B;
+$activated:                          #808080;
+//$activated:                          #9B9B9B;
+$grey:                                #96A1A5;
+//$grey:                                #B2B2B2;
+
+
+/*
+
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Flamenco">
+<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,800,700' rel='stylesheet' type='text/css'>
+*/
+
+
+// The path for our ionicons font files, relative to the built CSS in www/css
+$ionicons-font-path: "../lib/ionic/fonts" !default;
+
+//Open sans font stuff
+@import "variables";
+@import "mixins";
+@import "Light";
+@import "LightItalic";
+@import "Regular";
+@import "Italic";
+@import "Bold";
+@import "FlamencoRegular";
+@import "sqdIcons";
+@import "expanded";
+@import "menu";
+@import "squidle";
+@import "welcome";
+@import "help";
+@import "squidles";
+
+
+
+
+
+
+
+// Include all of Ionic
+@import "lib/ionic/scss/ionic";
+
+
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+
+body{
+ letter-spacing:0.02em!important;
+    font-size: $font-size-base!important;
+    font-family: $font-family-light-sans-serif!important;
+  -webkit-user-select: text!important;
+  -moz-user-select: text!important;
+  -ms-user-select: text!important;
+  user-select: text!important;
+
+}
+
+.ionic-body{
+  -webkit-user-select: text!important;
+  -moz-user-select: text!important;
+  -ms-user-select: text!important;
+  user-select: text!important;
+}
+
+.scroll{
+  -webkit-user-select: text!important;
+  -moz-user-select: text!important;
+  -ms-user-select: text!important;
+  user-select: text!important;
+}
+
+
+.list{
+  -webkit-user-select: text!important;
+  -moz-user-select: text!important;
+  -ms-user-select: text!important;
+  user-select: text!important;
+}
+
+html {
+  background-color:#0F0F0F!important;
+}
+
+pre {
+     letter-spacing:0.1em!important;
+    font-size: $font-size-base!important;
+    font-family: $font-family-light-sans-serif!important;
+
+}
+
+.title-left {
+  left:30px!important;
+}
+
+.pane, .view {
+background-color:transparent;
+}
+
+.slider-slide {
+letter-spacing:0.02em!important;
+    font-size: $font-size-base!important;
+    font-family: $font-family-light-sans-serif!important;
+}
+
+.prevent-ghost-click {
+  pointer-events: none;
+}
+
+p {
+     letter-spacing:0.02em;
+font-size: $font-size-base;
+    font-family: $font-family-light-sans-serif;
+}
+
+textarea{
+ letter-spacing:0.02em;
+     background-color: transparent!important;
+     width:100%;
+    resize:none;
+    font-family: $font-family-light-sans-serif
+}
+
+textarea.extra-padding-right{
+    padding-right: 40px;
+
+}
+
+.col-offset-30 {
+    margin-left: 30%!important;
+}
+
+input[type]{
+ letter-spacing:0.02em;
+    background-color: transparent!important;
+    width:100%;
+    height:47px;
+  font-family: $font-family-light-sans-serif
+}
+
+input[readonly] {
+background-color: transparent!important;
+    font-family: $font-family-light-sans-serif
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0;
+}
+
+
+
+.bar.bar-energized {
+    border-color: transparent!important;
+}
+
+.bar.bar-energized.bar-footer {
+    background-image:none;
+
+}.bar.bar-positive.bar-footer {
+    background-image:none;
+
+}.bar.bar-assertive.bar-footer {
+    background-image:none;
+}
+
+
+
+.bar.bar-positive {
+    border-color: transparent!important;
+}
+
+.bar.bar-assertive {
+    border-color: transparent!important;
+}
+
+
+.button-bar > .button {
+overflow:visible !important;
+}
+
+.bar-footer{
+  height:47px !important;
+    line-height: 47px;
+}
+
+.has-footer {
+bottom:47px!important;
+}
+
+.sqd-has-footer {
+bottom:47px!important;
+}
+
+/*.bar-header{
+  height:60px !important;
+}*/
+
+.bar-footer {
+
+.button,  button{
+font-size:$font-size-base!important;
+    font-family: $font-family-serif;
+    min-height: 47px!important;
+}
+}
+
+.popup-title {
+
+    font-family: $font-family-light-sans-serif;
+  letter-spacing:0.02em!important;
+  font-size: $font-size-base!important;
+}
+
+.popup-body {
+  font-family: $font-family-light-sans-serif;
+  details{
+    -webkit-user-select: text;
+    -moz-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+  }
+
+}
+
+
+
+
+.strong {
+font-weight: bold!important;
+}
+
+
+.button {
+border-radius:0px!important;
+     letter-spacing:0.02em!important;
+    font-size:$font-size-base!important;
+    font-family: $font-family-serif;
+
+
+}
+
+.multiline{
+
+white-space: normal;
+}
+
+
+
+.slider-pager i {
+font-size: $font-size-small;
+    color:white;
+}
+
+.button.back-button {
+padding: 0 0px!important;
+}
+
+      .bar .button.button-icon .icon:before, .bar .button.button-icon:before, .bar .button.button-icon.icon-left:before, .bar .button.button-icon.icon-right:before, .bar button.button-icon .icon:before, .bar button.button-icon:before, .bar button.button-icon.icon-left:before, .bar button.button-icon.icon-right:before {
+        vertical-align: top;
+        font-size: 20px;
+
+        }
+
+.button-icon{
+font-size: 25px!important;
+}
+
+/*i {
+font-size: 25px!important;
+}*/
+
+
+.titleIcon {
+font-size: 80px!important;
+}
+
+.row-middle {
+justify-content:center;
+-moz-justify-content:center;
+-ms-justify-content:center;
+-webkit-justify-content:center;
+
+}
+
+.loading-container .loading {
+  background-color: transparent!important;
+}
+
+
+
+
+.bar-header .title {
+font-family: $font-family-light-sans-serif;
+    color:white !important;
+    font-size:$font-size-large;
+}
+
+h2 {
+font-family: FlamencoRegular;
+    letter-spacing:0.08em;
+    font-size:$font-size-large!important;
+}
+
+
+
+
+.flamenco {
+font-family: FlamencoRegular !important;
+}
+
+.bar.bar-dark {
+    .title{
+    color:white;
+    }
+}
+
+
+.bar {
+background-color: rgba(0, 0, 0, 0);
+    border-bottom:none !important;
+}
+
+.dark {
+background-color: $dark !important;
+    color: #ffffff;
+  .item {
+    background-color: rgba(0, 0, 0, 0);
+/*    border: none;
+    border-top: 1px solid;
+    border-bottom: 2px solid;
+    padding: 20px;*/
+      max-height: none;}
+
+    h2{
+     color: white
+    }
+}
+.darkText {
+   color:$dark!important;
+ }
+
+.backgroundText {
+  color:$background!important;
+}
+
+.lighter {
+  background-color: $lighter !important;
+  color: #ffffff;
+  h2{
+    color: white
+  }
+}
+
+    h2{
+     color: white
+    }
+
+.blue {
+color:$blue!important;
+}
+
+.red{
+color:$red!important;
+}
+
+.green {
+color:$green!important;
+}
+
+.yellow {
+color:$yellow!important;
+}
+
+.grey{
+  color:$grey!important;
+}
+
+    .white{
+    color:white!important;
+    }
+
+.black {
+color:black!important;
+
+}
+
+.whiteBackground {
+background-color:white!important;
+}
+
+
+
+.item {
+   border-color: $activated !important;
+    border-style:solid none solid none !important;
+}
+
+.larger {
+    font-size: larger;
+}
+
+
+
+.avatar, .item-avatar .avatar {
+    background-position: center;
+    background-size: cover;
+    border-radius: 50%;
+    display: inline-block;
+    height: 56px;
+    left: 16px;
+    position: absolute;
+    width: 56px;
+    line-height: 56px;
+    font-size: 35px;
+}
+
+
+//Set the background colour
+.background, .background .pane{
+    background-color: $background;
+}
+
+//Set the light background colour
+.background-light, .background-light .pane{
+    background-color: $light;
+}
+
+.item, .item-complex .item-content{
+    background-color: transparent;
+    font-size:$font-size-base;
+
+}
+
+
+
+.slider-slides {
+    .slider-slide {
+        background-color: $background;
+    }
+}
+
+
+
+/* Empty. Add your own CSS if you like */
+.slider {
+  height: 100%;
+}
+.slider-slide {
+  padding-top: 50px;
+  color: #000;
+  text-align: center;
+
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 300;
+}
+
+
+
+.modal{
+  top: 0 ;
+  bottom: 0 ;
+  left: 0 ;
+  right: 0 ;
+  width: 100% ;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+.item-avatar, .item.tabs {
+  flex: 0 0 auto;
+}
+.item-body {
+  flex: 1 1 auto;
+}
+
+.item-note {
+font-size:$font-size-base;
+}
+
+
+.full {
+position: relative;
+    height: 100%;
+	width: 100%;
+}
+
+.min-full {
+  position: relative;
+  min-height: 100%;
+  width: 100%;
+}
+
+
+
+.no-padding {
+    padding: 0px !important;
+
+}
+
+.no-margin {
+margin:0px!important;
+}
+
+.no-bottom-border {
+border-bottom-style: none !important;
+}
+
+.no-horizontal-padding{
+  padding-left:0!important;
+  padding-right:0!important;
+}
+
+/*.float-button {
+
+width:100%;
+  position: fixed;
+  bottom: -10px;  Adjust to where you want it
+
+  z-index: 9999;
+}*/
+
+
+
+
+
+
+.item.activated {
+background-color: $activated!important;
+
+}
+
+.item-content.activated {
+background-color: $activated!important;
+
+}
+
+
+    .item.active,
+.item.activated,
+.item-complex.active .item-content,
+.item-complex.activated .item-content,
+.item .item-content.active,
+.item .item-content.activated {
+  border-color: #ccc;
+  background-color: $activated; }
+  .item.active.item-complex > .item-content,
+  .item.activated.item-complex > .item-content,
+  .item-complex.active .item-content.item-complex > .item-content,
+  .item-complex.activated .item-content.item-complex > .item-content,
+  .item .item-content.active.item-complex > .item-content,
+  .item .item-content.activated.item-complex > .item-content {
+    border-color: #ccc;
+    background-color: $activated; }
+
+
+.challenge {
+background-color:$positive;
+}
+
+.challengeText {
+color:$positive!important;
+}
+
+.prize {
+background-color:$energized;
+}
+
+.prizeText {
+color:$energized!important;
+}
+
+.answer {
+background-color:$assertive;
+}
+
+label{
+background-color:transparent!important;
+    border-radius:0!important;
+}
+
+.footerThumbnail {
+      object-fit:cover;
+    object-position: 50% 0;
+    position: relative;
+    width:47px;
+    height:47px;
+}
+
+    .button.square{
+        position: relative;
+    min-width: 47px!important;
+    min-height: 47px!important;
+        line-height:47px;
+    }
+
+.bar-footer{
+  padding-top:0;
+  padding-bottom:0;
+}
+
+
+.sqd-center {
+  display: -webkit-box;
+display: -webkit-flex;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+    -moz-align-items:  center;
+    -ms-align-items:  center;
+        align-items:  center;
+    -webkit-justify-content: center;
+    -moz-justify-content: center;
+    -ms-justify-content: center;
+       justify-content: center;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+        flex-direction: column;
+}
+
+// .corner:after {
+// content: ' ';
+// 	position: absolute;
+// 	width: 0;
+// 	height: 0;
+// 	right: 0;
+// 	top:0;
+//     border-left: 1em  solid transparent;
+// }
+//
+//
+// .sqd-input.challenge:after
+// {
+//     @extend .corner;
+//     border-top: 1em  solid $positive;
+//
+//
+// }
+//
+// .sqd-input.prize:after
+// {
+//  @extend .corner;
+//
+//     border-top: 1em  solid $energized;
+//
+//
+// }
+//
+// .sqd-input.answer:after
+// {
+//  @extend .corner;
+//     border-top: 1em  solid $assertive;
+//
+//
+// }
+//
+// .sqd-input.background:after
+// {
+//
+//     content: ' ';
+// 	position: absolute;
+// 	width: 0;
+// 	height: 0;
+// 	right: 0;
+// 	top:0;
+//     border-top: 1em  solid $background;
+//     border-left: 1em  solid transparent;
+//
+// }
+
+ .sqd-input {
+
+     .input-label {
+width:30px!important;
+         height:100%;}
+
+     .item-input {
+     padding:0 0 0 16px;
+     }
+}
+
+
+.answerText {
+color:$assertive!important;
+}
+
+ion-popover-view.fit {
+  height: auto !important;
+}
+
+ion-popover-view.fit ion-content {
+  position: relative !important;
+}
+
+.modal-backdrop {
+  position: relative!important;
+  height: 100%!important;
+  width: 100%!important;
+}
+
+.platform-android ion-popover-view.fit {
+  margin-top: 10px !important;
+}
+
+.popover {
+
+    background-color: transparent!important;
+    width:auto!important;
+}
+
+.platform-android{
+        .popover-arrow{
+
+        display:none!important;
+    }
+
+    .popover {
+
+
+
+    .item.positive{
+
+
+            background-color:$positive;
+        }
+
+
+        .item.assertive {
+            background-color:$assertive;
+
+        }
+
+
+
+}
+
+
+}
+
+.platform-ios{
+    .popover-arrow{
+
+        display:none!important;
+    }
+    .popover {
+
+
+
+    .item.positive{
+
+
+            background-color:$positive;
+        }
+
+
+        .item.assertive {
+            background-color:$assertive;
+
+        }
+
+
+
+}
+
+}
+
+
+.icon-size-extra-large {
+
+    font-size:30px!important;
+
+}
+
+
+::-webkit-input-placeholder {
+  color: $grey!important;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+  color:$grey!important;
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+  color: $grey!important;}
+
+:-ms-input-placeholder {
+  color: $grey!important;
+}
+
+
+@media (min-width:500px) {
+  body {
+    width:500px!important;
+    margin:auto;
+  }
+}
+

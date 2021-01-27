@@ -1,0 +1,177 @@
+<ion-view view-title="Welcome" cache-view="false" class="sqd-welcome background">
+
+
+    <ion-content has-bouncing="false" class="white text-center" overflow-scroll="true" >
+
+
+
+
+
+            <!----------------Slide 1------------->
+            
+
+        
+                
+              <div class="row row-center min-full">
+
+                  <div class="col">
+
+                      <h1 class="white" style="letter-spacing:0.04em;margin-bottom:0;">Squidler</h1>
+
+                      <div class="logo-container padding">
+                          <img ng-click="welcome.changeLogo()" ng-src="{{welcome.logo}}" class="logo">
+                      </div>
+
+                      Turns messaging into a game
+
+                      <!--@2016 Level 8 Limited <br>-->
+                      <!--All rights reserved. <br>-->
+                      <!--<a ng-href="">Privacy and Terms of Use</a>-->
+
+
+                  </div>
+              
+              <!--<div class="col">-->
+                  <!---->
+                              <!--<h3 class="no-margin">Welcome to Squidler!</h3>-->
+            <!--<div class="logo-container padding">-->
+              <!--<img ng-click="welcome.changeLogo()" ng-src="{{welcome.logo}}" class="logo">-->
+            <!--</div>-->
+            <!---->
+                  <!--Where messaging meets gaming-->
+
+
+                  <!---->
+                  <!--</div>-->
+                  <!---->
+                  <i class="ion-ios-arrow-down" ng-click="welcome.pageDown(1)"></i>
+
+
+
+              </div>
+
+
+
+        <!----------------Slide 2------------->
+
+
+
+
+        <div class="row row-center min-full ">
+
+            <div class="col">
+
+                <div class="padding">
+
+                    <!--<h3>Turns messaging into a game:</h3>-->
+
+
+                    Challenge your friends in a fun and unique way by sending them a locked message which they can only unlock by answering a question you set
+
+                    <i class="ion-ios-arrow-down" ng-click="welcome.pageDown(2)"></i>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+            
+            <!----------------Slide 3------------->
+
+
+
+
+              <div class="row row-center min-full ">
+              
+              <div class="col">
+                  
+                              <h3 style="margin-bottom:0px;">How it works:</h3>
+
+
+                  
+                  <div class="padding-horizontal">
+                      
+            <ion-list class="text-left">
+                  
+                  <ion-item class="padding-vertical">
+                <div class="white multiline"><strong>1.</strong> Craft your message</div>
+                      <div class="grey multiline small-text">
+                       send text, image, animation, or video
+                      </div>
+                
+                </ion-item>
+                
+                <ion-item  class="padding-vertical">
+                    <div class="white multiline">
+                        <strong>2.</strong> Lock it with a question</div>
+                    
+                    <div class="grey multiline small-text">
+                        try something challenging that your friend will find fun 
+                    </div>
+                    
+                    
+                </ion-item>
+                
+                
+                <ion-item  class="padding-vertical">
+                    
+                    <div class="white multiline">
+                
+                        <strong>3.</strong> Share it via your favourite social or messaging app</div>
+                    
+                    <div class="grey multiline small-text">
+                        no one can see your Squidle unless they answer your question correctly
+                    </div>
+                </ion-item>
+                  
+                  
+                  </ion-list>
+             
+
+                  
+                  </div>
+                  
+              </div>
+
+                  <i class="ion-ios-arrow-down" ng-click="welcome.pageDown(3)"></i>
+                  
+                  </div>
+
+
+            
+            <!----------------Slide 4------------->
+
+
+
+              
+               <div class="row row-center min-full ">
+              
+              <div class="col">
+
+                  <div class="padding">
+                  
+            <h3>To get started:</h3>
+
+
+                      You <strong>don't</strong> need the app to play<br><br>
+                      Just tap on a Squidle e.g. <a class="strong" href="{{::BASE}}/ImASquidle">squidler.com/ImASquidle</a> <br>to start Squidling
+                      </br></br>
+
+                      Download our <strong>FREE</strong> app to create Squidles of your own</br></br>
+
+                      <button class="button  button-positive" ng-click="welcome.downloadSquidler()">Download Squidler</button>
+
+                  </div>
+                   </div>
+                   <div class="privacy">
+                       <a ng-href="/main/help" class="small-text" >Contact</a>
+                       <a ng-href="/main/info" class="small-text">About</a>
+                   </div>
+
+              </div>
+
+    </ion-content>
+</ion-view>

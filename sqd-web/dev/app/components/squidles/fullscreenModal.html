@@ -1,0 +1,22 @@
+<ion-modal-view class="background sqd-fullscreen">
+    <ion-content >
+
+        <!--<ion-nav-bar class="bar-clear">-->
+        <!--<ion-nav-buttons side="secondary">-->
+        <!--<button class="button button-icon" ng-click="squidle.closeFullscreen()"><i class="challengeText icon ion-ios-close"></i></button>-->
+        <!--</ion-nav-buttons>-->
+        <!--</ion-nav-bar>-->
+
+
+
+        <ion-scroll overflow-scroll="false" zooming="true" direction="xy" min-zoom="1" max-zoom="100" delegate-handle="fullScreenImage" style="width: 100%; height: 100%; position: absolute; top:0; left:0" on-double-tap="squidle.resetFullScreenImage()">
+
+            <img ng-src="{{::squidle.data.challenge.photo.value}}" style="object-fit:contain; object-position: 50% 50%;width:100%;" ng-if = "!(squidle.prizeDisplayed) && squidle.fullScreenOpen">
+            <img ng-src="{{::squidle.data.prize.photo.value}}" style="object-fit:contain; object-position: 50% 50%;width:100%;" ng-if = "squidle.prizeDisplayed && squidle.fullScreenOpen">
+
+        </ion-scroll>
+
+        <button style="position:absolute;right:0;" class="button button-icon" ng-click="squidle.closeFullscreen()"><i class="challengeText icon ion-ios-close"></i></button>
+
+    </ion-content>
+</ion-modal-view>

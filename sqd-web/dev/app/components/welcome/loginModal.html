@@ -1,0 +1,41 @@
+
+<ion-modal-view class="background">
+
+
+    <ion-header-bar align-title="left" class="bar-dark">
+
+    <button class="button button-icon sqd-icon-left-arrow" ng-click="welcome.closeLogin()">
+    </button>
+
+  <h1 class="title">Login</h1>
+
+</ion-header-bar>
+
+
+
+
+  <ion-content class="padding sqd-welcome" has-bouncing="false">
+
+      <div class="row row-center full">
+
+          <div class="col">
+
+                  <form name="welcome.loginForm" ng-submit="welcome.doLogin()" class="full">
+
+        <div class="padding-bottom">
+          <sqd-input colour="dark" background="background" name="email" type="email" placeholder="Email" model="welcome.email" ng-readonly="false" valid="true" form="welcome.loginForm" links="false"></sqd-input>
+        </div>
+
+
+
+          <button class=" strong button button-block button-positive" type="submit">Get one-time login</button>
+</form>
+
+
+
+          </div>
+
+      </div>
+
+  </ion-content>
+</ion-modal-view>

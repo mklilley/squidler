@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' http://*.squidler.com https://*.squidler.com https://www.googleapis.com  gap:  https://ssl.gstatic.com http://*.youtube.com https://*.youtube.com; img-src data: *; style-src 'self' 'unsafe-inline';">-->
+    <title>Squidler - Open in-app</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@sqdlvl8" />
+    <meta property="fb:app_id" content="680756422028814"/>
+    <meta property="og:title" content="Squidler -  Open in-app" />
+    <meta property="og:site_name" content="Squidler" />
+    <meta property="og:description" content="Turns messaging into a game" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://squidler.com/" />
+    <meta property="og:image" content="https://squidler.com/img/logo_OG.png" />
+
+    <style>
+        .full{
+            overflow-y: scroll;
+        }
+    </style>
+
+    <script>
+    function is(type){
+        return window.navigator.userAgent.toLowerCase().indexOf(type) !==-1;
+    }
+
+    function downloadSquidler(){
+        if(is("iphone")){
+            window.open('https://itunes.apple.com/us/app/squidler/id1133896864?ls=1&mt=8', '_system', 'location=yes');
+        }
+        else if(is("android")){
+            window.open('https://play.google.com/store/apps/details?id=com.squidler', '_system', 'location=yes');
+        }
+        else{
+            alert("Sorry, Squidler is only currently available for Android and iPhone");
+        }
+    }
+
+
+
+    </script>
+
+</head>
+
+<body class="full">
+
+<div class="sqd-welcome background full view">
+
+
+    <div class="row row-center min-full white text-center padding" >
+
+        <div class="col">
+
+            <h3 class="no-margin">Open in-app</h3>
+            <div class="logo-container padding">
+                <a href="https://squidler.com">
+                    <img src="img/logo_orange_sad.svg" class="logo"></a>
+            </div>
+
+
+            <div id="verify" class="strong button button-block button-positive" onclick="downloadSquidler()">Download/Update Squidler</div>
+
+            <noscript><strong>THIS BUTTON WON'T WORK UNTIL YOU ENABLE JAVASCRIPRT</strong> <br></noscript>
+
+            <div class="grey multiline small-text">
+                You need Squidler Version 0.2.3 or above to use "Open in-app" <br>  Unfortanately, some in-app browsers make it hard to deep link into Squidler. Use the option to open this page outside of the current app.
+            </div>
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>

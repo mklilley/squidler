@@ -1,0 +1,252 @@
+.sqd-fullscreen{
+
+
+    
+    .scroll{height:100%}
+}
+
+
+.sqd-squidle{
+    
+//    .item-input input[type="text"].cloned-text-input ,.item-input textarea.cloned-text-input{
+//display: none !important;
+//}
+
+  //.previous-input-focus, .cloned-text-input + input, .cloned-text-input + textarea {
+  //  position: absolute !important;
+  //  left: -9999px;
+  //  width: 200px;
+  //}
+
+  .report{
+    position:absolute;
+    top:-5px;
+    color:$grey;
+    font-size:12px;
+    text-align: center;
+    width:85%;
+    left:15%;
+  }
+    
+.scroll{height:100%;
+   
+    }
+    
+    .iosFooterAdjust {
+         top: -60px;
+        
+    }
+    
+div.bubble {
+position: relative;
+        -webkit-box-sizing: border-box;
+   -moz-box-sizing: border-box;
+        box-sizing: border-box;
+    
+   
+    /*	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;*/
+    color:white;
+        text-align: left;
+    
+    a {
+        color:white!important;
+    }
+}
+    
+    .challenge{
+     border: 0.5em solid $positive;
+    }
+    .prize {
+    border: 0.5em solid $energized;
+    }
+
+
+div.bubbleTailChallenge {
+position: relative;
+    align-self: center;
+    -webkit-align-self: center;
+  width: 0;
+  height: 0;
+  border-top: 4px solid transparent;
+  border-bottom: 4px solid transparent;
+  border-right:8px solid $positive;
+  margin-left:10px;
+
+}
+    
+    div.bubbleTailPrize {
+      position: relative;
+      align-self: center;
+      -webkit-align-self: center;
+      width: 0;
+      height: 0;
+      border-top: 4px solid transparent;
+      border-bottom: 4px solid transparent;
+      border-right:8px solid $energized;
+      margin-left:10px;
+	
+}
+
+  div.bubbleTailAnswer {
+    position: relative;
+    align-self: center;
+    -webkit-align-self: center;
+    width: 0;
+    height: 0;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 8px solid $lighter;
+    margin-left:10px;
+  }
+    
+        div.bubbleTailClear {
+position: relative;
+    align-self: flex-end;
+    -webkit-align-self:flex-end;
+	width: 0;
+	height: 0;
+	border: 0.3em  solid;
+    border-color: transparent transparent transparent transparent;
+	
+}
+
+
+    
+    i {
+font-size: 30px;
+      position:relative;
+      vertical-align:text-bottom;
+
+}
+
+  .sqd-icon-challengeCircled:before {
+    content:' ';
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    top:5px;
+    left:5px;
+
+
+  }
+
+  .sqd-icon-answerCircled:before {
+    content:' ';
+    width:20px;
+    height:20px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    top:5px;
+    left:5px;
+
+  }
+
+  .sqd-icon-prizeCircled:before {
+    content:' ';
+    width:24px;
+    height:24px;
+    border-radius: 50%;
+    background-color: white;
+    position:absolute;
+    top:3px;
+    left:3px;
+
+  }
+    
+    .timer{
+    font-size: 12px;
+        margin-top: -15px;
+    }
+    
+
+    
+    .slider-pager {
+    
+bottom:65px;
+z-index: 10;    
+    }
+    
+
+
+iframe {
+
+   position: absolute;
+
+     top:0%;
+    width:100%;
+    height:100%;
+        left:0;
+    
+}
+    
+    .iframe-container {
+    position: relative;
+    padding-bottom: 50%;
+    height: 0;
+    }
+    
+
+    
+
+    
+    
+    .content-prize {
+    max-height:100%;
+      margin-left:-10px;
+      -webkit-user-select: text!important;
+      -moz-user-select: text!important;
+      -ms-user-select: text!important;
+      user-select: text!important;
+    }
+  .content-prize.preview {
+    max-height:-webkit-calc(100% - 2*#{$font-size-base} + 15px);
+    max-height:-moz-calc(100% - 2*#{$font-size-base} + 15px);
+    max-height:calc(100% - 2*#{$font-size-base} + 15px);
+    margin-left:-10px;
+    -webkit-user-select: text!important;
+    -moz-user-select: text!important;
+    -ms-user-select: text!important;
+    user-select: text!important;
+  }
+    
+        .content-challenge {
+    max-height:-webkit-calc(100% - 2*#{$font-size-base});
+    max-height:-moz-calc(100% - 2*#{$font-size-base});
+    max-height:calc(100% - 2*#{$font-size-base});
+          margin-left:-10px;
+          -webkit-user-select: text!important;
+          -moz-user-select: text!important;
+          -ms-user-select: text!important;
+          user-select: text!important;
+
+    }
+    
+            .content-challenge.preview {
+    max-height:-webkit-calc(100% - 4*#{$font-size-base});
+    max-height:-moz-calc(100% - 4*#{$font-size-base});
+    max-height:calc(100% - 4*#{$font-size-base});
+              margin-left:-10px;
+              -webkit-user-select: text!important;
+              -moz-user-select: text!important;
+              -ms-user-select: text!important;
+              user-select: text!important;
+
+    }
+
+  .content-answer {
+    margin-left:-10px;
+  }
+    
+
+
+
+    
+
+
+
+}

@@ -1,0 +1,61 @@
+<h1><code ng:non-bindable="">resources</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-resources-page"><p>This is a service that is returned as part of resourcesProvider. Used to communicte with all squidler backend resources</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">resources($q, $http, $timeout, exceptions, $cordovaNetwork, $ionicPlatform);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>$http</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Angular http service</p>
+</div></td></tr><tr><td>$timeout</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Angular timeout service</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Service to catch a failed promise</p>
+</div></td></tr><tr><td>$cordovaNetwork</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>ngCordova Service to tell if the network is avaiable or not</p>
+</div></td></tr><tr><td>$ionicPlatform</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Ionic platform service</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-resources-page"><p>Service object exposing methods - create, read, update</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_action">action(name, action, id, api, data, options)</h3>
+<div class="action"><div class="action-page"><p>Performs a custom action on the backend, using a POST method. This takes a minimum time set in the config of resourcesProvider using the method setWaitTime</p>
+</div><h5 id="methods_action_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="action-page"><p>Primary key used for encoding the  JSON data sent to backend and for reading the response data, e.g. &#39;squidle&#39;</p>
+</div></td></tr><tr><td>action</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="action-page"><p>Label for the action you want to perform e.g. &quot;solve&quot;</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="action-page"><p>Used to uniquely identify the requested resource that you want to perform the action on, e.g. &#39;8KLv694&#39;</p>
+</div></td></tr><tr><td>api</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="action-page"><p>URL of the backend api for the  resource described by &#39;name&#39;, e.g. &#39;/api/1/squidles&#39;</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="action-page"><p>Data object specific to the backend resource, see <a href="http://#/api/backend_resource_list">http://#/api/backend_resource_list</a></p>
+</div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="action-page"><p>{formData:bool,silent:bool} formData is when payload is form not just JSON. silent false means any exceptions will not be displayed to the user via a popup (default is true)</p>
+</div></td></tr></tbody></table><h5 id="methods_action_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="action-page"><p>Resolves to an object specific to the backend resource if the resource was created successfully.  Otherwise the promise is rejected with an object of the form {message:string, code:int}</p>
+</div></td></tr></table><h4 id="methods_action_example">Example</h4>
+<div class="example"><div class="action-page"><pre class="prettyprint linenums">resources.action('squidle', 'solve', 'http://squidler.com/api/1/squidles', {...squidle data...})</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_destroy">destroy(name, api, id, options)</h3>
+<div class="destroy"><div class="destroy-page"><p>Destroys a resource on the backend. This takes a minimum time set in the config of resourcesProvider using the method setWaitTime</p>
+</div><h5 id="methods_destroy_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="destroy-page"><p>Primary key used for reading the response data from the backend, e.g. &#39;squidle&#39;</p>
+</div></td></tr><tr><td>api</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="destroy-page"><p>URL of the backend api for the  resource described by &#39;name&#39;, e.g. &#39;/api/v1/squidles&#39;</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="destroy-page"><p>Used to uniquely identify the requested resource, e.g. &#39;8KLv694&#39;</p>
+</div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="destroy-page"><p>{silent:bool} silent false means any exceptions will not be displayed to the user via a popup (defauhlt is true)</p>
+</div></td></tr></tbody></table><h5 id="methods_destroy_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="destroy-page"><p>Resolves to an object specific to the backend resource if the resource was updated successfully.  Otherwise the promise is rejected with an object of the form {message:string, code:int}</p>
+</div></td></tr></table><h4 id="methods_destroy_example">Example</h4>
+<div class="example"><div class="destroy-page"><pre class="prettyprint linenums">resources.destroy('squidle', 'http://squidler.com/api/v1/squidles', '5Ry4fgI')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_update">update(name, api, id, data, options)</h3>
+<div class="update"><div class="update-page"><p>Updates a resource on the backend, using a POST method wth parameter _method = put. This takes a minimum time set in the config of resourcesProvider using the method setWaitTime</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>name</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Primary key used for reading the response data from the backend, e.g. &#39;squidle&#39;</p>
+</div></td></tr><tr><td>api</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>URL of the backend api for the  resource described by &#39;name&#39;, e.g. &#39;/api/1/squidles&#39;</p>
+</div></td></tr><tr><td>id</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Used to uniquely identify the requested resource, e.g. &#39;8KLv694&#39;</p>
+</div></td></tr><tr><td>data</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="update-page"><p>Data object specific to the backend resource, see <a href="http://#/api/backend_resource_list">http://#/api/backend_resource_list</a></p>
+</div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="update-page"><p>{silent:bool} silent false means any exceptions will not be displayed to the user via a popup (default is true)</p>
+</div></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="update-page"><p>Resolves to an object specific to the backend resource if the resource was updated successfully.  Otherwise the promise is rejected with an object of the form {message:string, code:int}</p>
+</div></td></tr></table><h4 id="methods_update_example">Example</h4>
+<div class="example"><div class="update-page"><pre class="prettyprint linenums">resources.update('profile', 'http://squidler.com/api/1/users/profile', 'joblogs', {...profile data...})</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

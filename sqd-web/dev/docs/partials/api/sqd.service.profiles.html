@@ -1,0 +1,41 @@
+<h1><code ng:non-bindable="">profiles</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-profiles-page"><p>This is a service that is returned as part of profilesProvider. Used to retrieve and update a user&#39;s profile</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">profiles($q, stores, resources, files, exceptions);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>stores</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Service used to interface with the html5 local storage</p>
+</div></td></tr><tr><td>resources</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Service to communicate with backend resources</p>
+</div></td></tr><tr><td>files</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Service to upload images to the backend</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Service to catch a failed promise</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-profiles-page"><p>Service object exposing methods - read, update</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_read">read(username, options)</h3>
+<div class="read"><div class="read-page"><p>Retrives the public profile for a specific user or all profiles stored locally.</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>username <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="read-page"><p>Username of user. If not present then all locally stored profiles are returned</p>
+</div></td></tr><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="read-page"><p>If presented with the key &quot;refresh&quot; set to true then the requested profile/s will be locally updated from the server data</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object with keys: avatar, location, bio and name if profile was successfully read, otherwise the promise is rejected.</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">profiles.read('joblogs')</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_update">update(username, profile)</h3>
+<div class="update"><div class="update-page"><p>Updates the public profile of a speciic user (need to be the user in question to do this)</p>
+</div><h5 id="methods_update_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>username</td><td><a href="" class="label type-hint type-hint-string">string</a></td><td><div class="update-page"><p>Username</p>
+</div></td></tr><tr><td>profile</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="update-page"><p>Data entries that the user wants to update, e.g. bio, avatar, location, etc...</p>
+</div></td></tr></tbody></table><h5 id="methods_update_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="update-page"><p>Resolves to an object with keys: avatar, location, bio and name if profile was successfully read, otherwise the promise is rejected.</p>
+</div></td></tr></table><h4 id="methods_update_example">Example</h4>
+<div class="example"><div class="update-page"><pre class="prettyprint linenums">profiles.read('joblogs',{bio:'Me me Me', location:'London'})</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+</div>

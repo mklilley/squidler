@@ -1,0 +1,58 @@
+<h1><code ng:non-bindable="">credits</code>
+<div><span class="hint">service in module <code ng:non-bindable="">sqd</code>
+</span>
+</div>
+</h1>
+<div><h2 id="description">Description</h2>
+<div class="description"><div class="sqd-service-page sqd-service-credits-page"><p>This is a service that is returned as part of creditsProvider. Used to retrieve redits information and to buy credits</p>
+</div></div>
+<h2 id="usage">Usage</h2>
+<div class="usage"><pre class="prettyprint linenums">credits($q, resources, stores, exceptions, receipts);</pre>
+<h4 id="usage_parameters">Parameters</h4><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>$q</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Angular promise service</p>
+</div></td></tr><tr><td>resources</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Service to communicate with backend resources</p>
+</div></td></tr><tr><td>stores</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Service used to interface with the html5 local storage</p>
+</div></td></tr><tr><td>exceptions</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Service to catch a failed promise</p>
+</div></td></tr><tr><td>receipts</td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Service to get information on previous purchases</p>
+</div></td></tr></tbody></table><h4 id="usage_returns">Returns</h4><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="sqd-service-page sqd-service-credits-page"><p>Service object exposing methods - read</p>
+</div></td></tr></table></div>
+<div class="member method"><h2 id="methods">Methods</h2>
+<ul class="methods"><li><h3 id="methods_create">create(options)</h3>
+<div class="create"><div class="create-page"><p>Creates credits on the server by first going to Google or Apple to do the purchase</p>
+</div><h5 id="methods_create_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="create-page"><p>If it contains the key &quot;refresh&quot; with value true then the credits will be updated from the server</p>
+</div></td></tr></tbody></table><h5 id="methods_create_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="create-page"><p>Resolves to an object with keys &#39;number&#39; telling you the number of credits the current user has</p>
+</div></td></tr></table><h4 id="methods_create_example">Example</h4>
+<div class="example"><div class="create-page"><pre class="prettyprint linenums">credits.create()</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_read">read(options)</h3>
+<div class="read"><div class="read-page"><p>Retrieves the number of credits that the current user has</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="read-page"><p>If it contains the key &quot;refresh&quot; with value true then the credits will be updated from the server</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object with keys &#39;number&#39; telling you the number of credits the current user has</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">credits.read()</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_read">read(options)</h3>
+<div class="read"><div class="read-page"><p>Retrieves the receipts from previous purchases for the current user</p>
+</div><h5 id="methods_read_parameters">Parameters</h5><table class="variables-matrix table table-bordered table-striped"><thead><tr><th>Param</th><th>Type</th><th>Details</th></tr></thead><tbody><tr><td>options <div><em>(optional)</em></div></td><td><a href="" class="label type-hint type-hint-object">object</a></td><td><div class="read-page"><p>If it contains the key &quot;refresh&quot; with value true then the credits will be updated from the server</p>
+</div></td></tr></tbody></table><h5 id="methods_read_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="read-page"><p>Resolves to an object with keys &#39;number&#39; telling you the number of credits the current user has</p>
+</div></td></tr></table><h4 id="methods_read_example">Example</h4>
+<div class="example"><div class="read-page"><pre class="prettyprint linenums">receipts.read()</pre>
+</div></div>
+</div>
+</li>
+<li><h3 id="methods_verify">verify()</h3>
+<div class="verify"><div class="verify-page"><p>Verifies any pending credits that have been successfully purchased on apple of google but for whaetever reason were not verified on our servers the first time around</p>
+</div><h5 id="methods_verify_returns">Returns</h5><table class="variables-matrix"><tr><td><a href="" class="label type-hint type-hint-promise">promise</a></td><td><div class="verify-page"><p>Resolves if the pending purchases have been verified, otherwise it rejects</p>
+</div></td></tr></table><h4 id="methods_verify_example">Example</h4>
+<div class="example"><div class="verify-page"><pre class="prettyprint linenums">credits.verify()</pre>
+</div></div>
+</div>
+</li>
+</ul>
+</div>
+<h2 id="example">Example</h2>
+<div class="example"></div>
+</div>

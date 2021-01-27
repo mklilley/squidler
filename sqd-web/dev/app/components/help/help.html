@@ -1,0 +1,83 @@
+
+<ion-view view-title="Help and Support" class="background sqd-help">
+    <ion-nav-title>
+        {{history.backView.title || "Menu"}}
+    </ion-nav-title>
+
+  
+      <ion-content class="padding" overflow-scroll="true" >
+          <ion-refresher
+                  pulling-text="Pull to refresh..."
+                  on-refresh="help.refresh()">
+          </ion-refresher>
+          <div class="padding">
+    <ion-list  class="item-icon-right">
+        <div ng-repeat="FAQ in help.FAQs" ng-click="help.toggleFAQ(FAQ)">
+      <ion-item  class="white multiline" ng-class="{'no-bottom-border':help.isFAQShown(FAQ)}">
+                     
+          <div class="row no-padding" > 
+              
+              <div class="col-90">{{FAQ.q}}</div>
+              <div class="col-10">  <i class="icon" ng-class="help.isFAQShown(FAQ) ? 'sqd-icon-up-arrow' : 'sqd-icon-down-arrow'"></i></div>
+<!--    <p style="color:white"></p>-->
+              </div>
+      </ion-item>
+          <ion-item class="item-accordion grey multiline" ng-show="help.isFAQShown(FAQ)">
+            {{FAQ.a}}
+          </ion-item>
+            </div>
+    </ion-list>
+          </div>
+
+          <!----------------Empty FAQs------------->
+
+          <div ng-if="objectKeys(help.FAQs).length==0" ng-click="help.refresh()">
+
+              <div class="row row-center full">
+
+                  <div class="col">
+
+                      <h3 class="white  text-center">Oops, something went wrong!</h3>
+
+
+                      <div class="white multiline padding-top text-center">Tap here to refresh the FAQs</div>
+
+
+
+
+                  </div>
+
+              </div>
+          </div>
+
+
+
+        
+      
+  </ion-content>
+    
+      <ion-footer-bar class="bar-clear  padding-horizontal">
+ <div class="full padding-horizontal">
+
+   <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="help.askQuestion.show()">
+  Ask a question
+</button>
+          </div>
+
+ </ion-footer-bar>
+<!--    
+        <div class="float-button">
+       
+            <div class="padding">
+                <div class="padding">
+        
+       
+                   <button class=" strong button button-block button-energized no-padding no-margin"  ng-click="help.askQuestion.show()">
+  Ask a question
+</button>
+        </div>
+        
+     </div> 
+    </div>-->
+
+</ion-view>

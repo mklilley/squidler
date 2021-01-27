@@ -1,0 +1,238 @@
+<ion-view view-title="Squidle" class="background sqd-squidle" cache-view="false">
+
+    <ion-nav-title>
+        {{history.backView.title || "Menu"}}
+    </ion-nav-title>
+
+    <ion-slide-box show-pager="{{(squidle.isPreview||squidle.alreadyAnswered)}}" on-slide-changed="squidle.slideHasChanged($index)">
+
+        <!----------------Challenge------------->
+
+        <ion-slide>
+
+            <ion-content class="padding" scroll="true" has-bouncing="false">
+                <div ng-style="{{::squidle.fullScreen}}">
+
+                    <!--<div class=" row row-center padding full" ng-class="{iosFooterAdjust:squidle.keyboardShow}">-->
+                    <div class=" row row-center padding full">
+
+                        <div class="col full">
+
+
+                            <div class="row padding-vertical content-challenge" ng-class="{preview:squidle.isPreview||squidle.alreadyAnswered}">
+
+                                <div class="col col-10  col-center challengeText no-padding">
+                                    <i class="sqd-icon-challengeCircled"></i> </div>
+
+                                <div class="bubbleTailChallenge"></div>
+
+                                <div class="col col-90  bubble challenge no-padding" style="overflow:hidden" > <p ng-bind-html="squidle.data.challenge.text.value | linky"></p>
+                                    <img ng-show="squidle.data.challenge.photo" ng-if="!squidle.fullScreenOpen" ng-src="{{::squidle.data.challenge.photo.value}}" expire={{172800}} style="width:100%"  ng-click="squidle.openFullscreen()" color="#FF6B01">
+                                    <div class="iframe-container" ng-if="squidle.data.challenge.video">
+                                        <iframe ng-src="{{::squidle.data.challenge.video.value+'?enablejsapi=1&version=3&playerapiid=ytplayer'}}" allowscriptaccess="always" frameborder="0" allowfullscreen sqd-pause></iframe>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <!----------------Answer------------->
+
+
+                            <div class="row padding-vertical content-answer" style="position:relative">
+
+                                <div class="col col-10  col-center answerText no-padding">
+                                    <i class="sqd-icon-answerCircled"></i>
+                                </div>
+                                <div class="bubbleTailAnswer"></div>
+                                <div class="col col-90 no-padding" ng-style="squidle.answerHeight">
+                                    <form id="squidle.squidleForm" name="squidle.squidleForm" class="full" ng-submit="squidle.makeGuess()" novalidate>
+                                        <sqd-input textarea="true" colour="lighter" background="background" name="guess" type="text" placeholder="{{squidle.data.answer.text.value}}" model="squidle.guess" form ="squidle.squidleForm" ng-readonly="{{::squidle.isPreview}}" valid="squidle.validGuess" links="false" sqd-required="true" enter-submit="guess"></sqd-input>
+
+                                    </form>
+
+                                </div>
+
+
+
+
+
+
+                            </div>
+
+
+
+
+
+
+
+
+
+
+
+                        </div>
+
+                    </div>
+
+                    <!--<div style="position:relative;  width:100%;height:60px;" class="padding-top keyboard-closed" >
+                 <div class=" button-bar full padding-horizontal" ng-if="!(squidle.isPreview)">
+
+
+
+         <button class="button button-block button-assertive no-padding no-margin" ng-click="squidle.makeGuess()" ng-hide = "squidle.alreadyAnswered">
+
+             <div class="unlock strong no-paddding ">Unlock</div>
+<div class="timer sqd-icon-clock no-padding"> {{squidle.countDown(squidle.data.timeRemaining)}}</div>
+
+
+</button>
+
+
+
+          <button class=" strong button button-block button-assertive no-padding no-margin" ng-click="squidle.lock()" ng-show = "squidle.alreadyAnswered">
+Re-Lock
+</button>
+
+</div>
+
+
+
+   </div>-->
+                </div>
+
+                <div class="report" on-tap="squidle.report()">
+                    Report inappropriate content
+                </div>
+
+
+            </ion-content>
+
+
+
+            <ion-footer-bar class="bar-clear  padding-horizontal">
+                <div class=" button-bar full padding-horizontal" ng-if="!(squidle.isPreview)">
+
+                    <button class=" strong button button-block button-energized no-padding no-margin" ng-click="squidle.getHint()" ng-hide = "squidle.alreadyAnswered || squidle.noMoreHints">
+                        Hint
+                    </button>
+
+
+
+                    <button type="submit" form="squidle.squidleForm" class="button button-block button-assertive no-padding no-margin" ng-hide = "squidle.alreadyAnswered">
+
+                        <div class="strong no-paddding no-margin">Unlock</div>
+                        <div class="timer sqd-icon-clock no-padding"> {{squidle.countDown(squidle.data.timeRemaining)}}</div>
+
+
+                    </button>
+
+
+
+                    <button class=" strong button button-block button-assertive no-padding no-margin" ng-click="squidle.lock()" ng-show = "squidle.alreadyAnswered">
+                        Re-Lock
+                    </button>
+
+                </div>
+
+
+
+
+
+            </ion-footer-bar>
+
+
+        </ion-slide>
+
+
+
+        <!----------------Prize------------->
+
+
+        <ion-slide>
+
+            <ion-content class="padding" scroll="false">
+
+                <div ng-style="{{::squidle.fullScreen}}">
+
+                <div class="row row-center padding full">
+
+                    <div class="col full">
+
+                        <div class="row padding-vertical content-prize" ng-class="{preview:squidle.isPreview||squidle.alreadyAnswered}">
+                            <div class="col col-10  col-center prizeText no-padding">
+                                <i class="sqd-icon-prizeCircled "></i></div>
+                            <div class="bubbleTailPrize"></div>
+                            <div class="col col-90 bubble prize no-padding" style="overflow:hidden" > <p ng-bind-html="squidle.data.prize.text.value | linky"></p>
+
+                                <img ng-show="squidle.data.prize.photo" ng-if="!squidle.fullScreenOpen" ng-src="{{::squidle.data.prize.photo.value}}" color="#FBAB00" expire={{172800}} style="width:100%;" ng-click="squidle.openFullscreen()">
+                                <div class="iframe-container" ng-if="squidle.data.prize.video">
+                                    <iframe ng-src="{{::squidle.data.prize.video.value+'?enablejsapi=1&version=3&playerapiid=ytplayer'}}" frameborder="0" allowfullscreen sqd-pause></iframe>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+                </div>
+
+
+
+</div>
+
+
+            </ion-content>
+
+            <ion-footer-bar  class="bar-clear  padding-horizontal">
+                <div class=" button-bar full padding-horizontal" ng-if="!(squidle.isPreview)">
+
+
+
+
+                    <button class=" strong button button-block button-energized no-padding no-margin" ng-click="squidle.createSquidle()">
+                        Create Squidle
+                    </button>
+
+                </div>
+            </ion-footer-bar>
+
+
+
+
+
+        </ion-slide>
+
+
+    </ion-slide-box>
+
+
+
+
+    <ion-footer-bar class="bar-clear  padding-horizontal"  ng-if="squidle.isPreview" >
+
+        <div class=" button-bar full padding-horizontal">
+
+            <!-- <button class=" strong button button-block button-dark no-padding no-margin" ng-click="$ionicGoBack()">
+Back
+</button>-->
+
+
+            <button class=" strong button button-block button-energized no-padding no-margin"ng-click="squidle.processSquidle()">
+                Lock
+            </button>
+
+        </div>
+
+
+
+
+
+
+
+    </ion-footer-bar>
+
+
+
+</ion-view>
+
+

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html class="full">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <!--<meta http-equiv="Content-Security-Policy" content="default-src 'self' http://*.squidler.com https://*.squidler.com https://www.googleapis.com  gap:  https://ssl.gstatic.com http://*.youtube.com https://*.youtube.com; img-src data: *; style-src 'self' 'unsafe-inline';">-->
+    <title>Squidler - One-Time Login</title>
+
+    <link rel="shortcut icon" href="img/favicon.ico">
+
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <link href="css/ionic.app.css" rel="stylesheet">
+
+    <meta name="twitter:card" content="photo" />
+    <meta name="twitter:site" content="@sqdlvl8" />
+    <meta property="fb:app_id" content="680756422028814"/>
+    <meta property="og:title" content="Squidler -  One-Time Login" />
+    <meta property="og:site_name" content="Squidler" />
+    <meta property="og:description" content="Turns messaging into a game" />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://squidler.com/" />
+    <meta property="og:image" content="https://squidler.com/img/logo_OG.png" />
+
+    <style>
+        .full{
+            overflow-y: scroll;
+        }
+    </style>
+
+    <script>
+        function getParameterByName(name, url) {
+            if (!url) url = window.location.href;
+            name = name.replace(/[\[\]]/g, "\\$&");
+            var regex = new RegExp("[?&]" + name + "(=([^&#]*)|&|#|$)"),
+                    results = regex.exec(url);
+            if (!results) return null;
+            if (!results[2]) return '';
+            return decodeURIComponent(results[2].replace(/\+/g, " "));
+        }
+
+        var url  = "https://squidler.com/api/1/auth/verify/"
+
+        window.onload = function() {
+            document.getElementById('verify').href = url + getParameterByName("token") || "";
+
+        };
+    </script>
+
+
+</head>
+
+<body class="full">
+
+<div class="sqd-welcome background full view">
+
+
+    <div class="row row-center min-full white text-center padding" >
+
+        <div class="col">
+
+            <h3 class="no-margin">Login Error</h3>
+            <div class="logo-container padding">
+                <a href="https://squidler.com">
+                    <img src="img/logo_orange_sad.svg" class="logo"></a>
+            </div>
+
+
+            <a id="verify" class="strong button button-block button-positive" href="https://squidler.com/api/1/auth/verify/">Try again here</a>
+
+            <noscript><strong>THIS BUTTON WON'T WORK UNTIL YOU ENABLE JAVASCRIPRT</strong> <br></noscript>
+
+            <br>
+            <details><summary>Need more help?</summary>Looks like you tried to open your one-time login link using your browser - instead you need to open this link using the Squidler app <br> <br><strong>1:</strong> Some email aps use their own web browsers to load links - if this is your situation please try loading this page in your normal web browser and try again <br><br> <strong>2:</strong> Otherwise, <strong><br>Android</strong> - Go to settings, then apps, then find the app where the login link is not loading correctly from and select 'clear defaults', then try loading the link again <br><br> <strong>iOS</strong> -  Long hold on a login link and it should give you the option to load in the Squidler app </details>
+
+
+        </div>
+
+    </div>
+
+
+
+</div>
+
+
+
+
+</body>
+</html>
